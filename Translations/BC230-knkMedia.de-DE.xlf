@@ -85,13 +85,13 @@
           <source>Description</source>
           <target>Beschreibung</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Description - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Manufacturer - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4245937622 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
           <target>Name</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Manufacturer - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
@@ -454,16 +454,16 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page LectureList - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Manufacturer Card</source>
-          <target>Knk Herstellerkarte</target>
+          <source>Manufacturer Card</source>
+          <target>Herstellerkarte</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer Card - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1477316675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Manufacturer List</source>
-          <target>Knk Herstellerliste</target>
+          <source>Manufacturer List</source>
+          <target>Herstellerliste</target>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer List - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Manufacturers - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model Card</source>

@@ -96,12 +96,12 @@
         <trans-unit id="Table 4245937622 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Description - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Manufacturer - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4245937622 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Manufacturer - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
@@ -464,12 +464,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Cars - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2998405077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Comment Card</source>
+          <source>Comment Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Comment List</source>
+          <source>Comment List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment List - Property Caption</note>
         </trans-unit>
@@ -484,14 +484,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page LectureList - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Manufacturer Card</source>
+          <source>Manufacturer Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer Card - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1477316675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Knk Manufacturer List</source>
+          <source>Manufacturer List</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer List - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Manufacturers - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model Card</source>
