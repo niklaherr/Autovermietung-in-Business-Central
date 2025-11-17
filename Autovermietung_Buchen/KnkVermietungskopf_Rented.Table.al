@@ -1,4 +1,4 @@
-table 50005 RentheadRented
+table 50005 "Posted Rental Header"
 {
 
     fields
@@ -45,7 +45,7 @@ table 50005 RentheadRented
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = count(Comment where(Headnr = field(Nr)));
+            CalcFormula = count("Knk Comment" where(Headnr = field(Nr)));
         }
     }
 

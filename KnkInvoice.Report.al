@@ -9,7 +9,7 @@ report 60050 Invoice
 
     dataset
     {
-        dataitem(Rentedhead; RentheadRented)
+        dataitem(Rentedhead; "Posted Rental Header")
         {
             RequestFilterFields = Nr;
 
@@ -126,11 +126,11 @@ report 60050 Invoice
             // {
             // }
 
-            dataitem(RentrowRented; RentrowRented)
+            dataitem(RentrowRented; "Posted Rental Line")
             {
                 DataItemLink = "Headnr" = field(Nr);
 
-                column(Manufactor; Manufactor)
+                column(Manufacturer; Manufacturer)
                 {
                 }
 
@@ -152,12 +152,12 @@ report 60050 Invoice
                         Gesamtpreis += Price;
                         Gesamtkm += "Driven Km";
                     end;
-                    FullCar := Manufactor + ' ' + Model;
+                    FullCar := Manufacturer + ' ' + Model;
                 end;
             }
 
 
-            dataitem(Commentdata; Comment)
+            dataitem(Commentdata; "Knk Comment")
             {
                 DataItemLink = "Headnr" = field(Nr);
                 column(Comment; Comment)
@@ -215,7 +215,7 @@ report 60050 Invoice
         CustomerPreInfo: Text[200];
         CustomerInfo: Text[200];
         FullCar: Text[200];
-        CommentRec: Record Comment;
+        CommentRec: Record "Knk Comment";
 
     local procedure GetCRLF(): Text
     var

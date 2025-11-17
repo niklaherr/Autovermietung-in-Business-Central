@@ -1,9 +1,9 @@
-page 70062 RentalLinesCard
+page 70062 "Rental Line Card"
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = RentalLines;
-    Caption = 'Vermietungszeilen';
+    SourceTable = "Rental Line";
+    Caption = 'Rental Line Card';
 
     layout
     {
@@ -27,7 +27,7 @@ page 70062 RentalLinesCard
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }

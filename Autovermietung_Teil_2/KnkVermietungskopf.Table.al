@@ -1,4 +1,4 @@
-table 50003 RentalHeader
+table 50003 "Rental Header"
 {
 
     fields
@@ -59,7 +59,7 @@ table 50003 RentalHeader
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = count(Comment where(Headnr = field(Nr)));
+            CalcFormula = count("Knk Comment" where(Headnr = field(Nr)));
         }
     }
 
@@ -87,15 +87,15 @@ table 50003 RentalHeader
         end;
     end;
 
-    local procedure RecalculateLines(Renthead: Record Renthead)
+    local procedure RecalculateLines(RentalHeaderRec: Record "Rental Header")
     var
-        Rentrow: Record Rentrow;
+        RentalLine: Record "Rental Line";
     begin
-        Rentrow.SetRange(Headnr, Nr);
-        if Rentrow.FindSet(false) then
+        RentalLine.SetRange(Headnr, Nr);
+        if RentalLine.FindSet(false) then
             repeat
-                Rentrow.Price := Rentrow.Verrechnen(Renthead, Rentrow);
-                Rentrow.Modify(false);
-            until Rentrow.Next() = 0;
+                RentalLine.Price := RentalLine.Verrechnen(RentalHeaderRec, RentalLine);
+                RentalLine.Modify(false);
+            until RentalLine.Next() = 0;
     end;
 }

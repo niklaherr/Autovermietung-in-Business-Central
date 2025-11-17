@@ -1,27 +1,27 @@
-page 50052 comment
+page 50051 "Knk Comment List"
 {
-    PageType = Card;
+    PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = Comment;
-    Caption = 'Kommentarkarte';
+    SourceTable = "Knk Comment";
+    Editable = false;
+    CardPageId = 50052;
+    Caption = 'Knk Comment List';
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(Group)
             {
                 field(Headnr; Rec.Headnr)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
 
                 field(Nr; Rec.Nr)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
 
                 field(Comment; Rec.Comment)
@@ -32,13 +32,11 @@ page 50052 comment
                 field(Booked; Rec.Booked)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
 
                 field(Date; Rec.Date)
                 {
                     ApplicationArea = All;
-                    Editable = false;
                 }
             }
         }

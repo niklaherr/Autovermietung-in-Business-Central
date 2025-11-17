@@ -9,9 +9,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Car - Field Color - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4179158116 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactor</source>
+          <source>Manufacturer</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Car - Field Manufactor - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Car - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4179158116 - Field 3487205323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model Description</source>
@@ -46,27 +46,27 @@
         <trans-unit id="Table 2790486453 - Field 775734828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booked</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Booked - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Booked - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Comment - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Date - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 267268504 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Headnr</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Headnr - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Headnr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Nr - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 235073672 - Field 449962110 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Class Teacher</source>
@@ -96,27 +96,27 @@
         <trans-unit id="Table 4245937622 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Manufactor - Field Description - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4245937622 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Manufactor - Field Name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Manufacturer - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactor</source>
+          <source>Manufacturer</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufactor - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 3618499918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactoring Start</source>
+          <source>Manufacturing Start</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufactoring Start - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufacturing Start - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 2930816286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactoring Stop</source>
+          <source>Manufacturing Stop</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufactoring Stop - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Model - Field Manufacturing Stop - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1695122201 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
@@ -204,9 +204,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Rentrow - Field Headnr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 525724401 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactor</source>
+          <source>Manufacturer</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Rentrow - Field Manufactor - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Rentrow - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 525724401 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
@@ -239,9 +239,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table RentrowRented - Field Headnr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2704088325 - Field 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactor</source>
+          <source>Manufacturer</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table RentrowRented - Field Manufactor - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RentrowRented - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2704088325 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
@@ -454,24 +454,24 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Teacher - Field Tax ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4179158116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Carcard</source>
+          <source>Car Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Car - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 336857349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Carlist</source>
+          <source>Car List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Cars - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2998405077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Kommentarkarte</source>
+          <source>Knk Comment Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page comment - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Commentlist</source>
+          <source>Knk Comment List</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page comments - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2963382932 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lecture Card</source>
@@ -484,37 +484,37 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page LectureList - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4245937622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactorcard</source>
+          <source>Knk Manufacturer Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Manufactor - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1477316675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manufactorlist</source>
+          <source>Knk Manufacturer List</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Manufactors - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Manufacturer List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Modelcard</source>
+          <source>Model Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Model - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2522411024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Modelllist</source>
+          <source>Model List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Models - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3558291151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rentheadlist</source>
+          <source>Rental Header List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Renthead - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1259371683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rentedlist</source>
+          <source>Posted Rental Header List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page RentheadRented - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2341086558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rentcard</source>
+          <source>Posted Rental Header Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page RentheadsRented - Property Caption</note>
         </trans-unit>
@@ -529,17 +529,17 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page RentheadsRented - Action Print Order - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 525724401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rentrowlist</source>
+          <source>Rental Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Rentrow - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2704088325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rentedcarslist</source>
+          <source>Posted Rental Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page RentrowRented - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3338709224 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vermietungszeilen</source>
+          <source>Rental Line Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Rentrows - Property Caption</note>
         </trans-unit>
@@ -574,7 +574,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page TeacherLookup - Action Select - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3172318063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Renthead</source>
+          <source>Rental Header Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page VermietungskopfCard - Property Caption</note>
         </trans-unit>
