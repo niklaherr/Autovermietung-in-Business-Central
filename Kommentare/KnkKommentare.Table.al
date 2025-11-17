@@ -8,7 +8,7 @@ table 50050 Comment
         {
             Caption = 'Headnr';
             DataClassification = ToBeClassified;
-            TableRelation = Renthead;
+            TableRelation = "Rental Header";
         }
 
         field(2; Nr; Integer)
@@ -52,8 +52,8 @@ table 50050 Comment
 
     trigger OnModify()
     var
-        RecRenthead: Record Renthead;
-        RecHeadRented: Record RentheadRented;
+        RecRenthead: Record "Rental Header";
+        RecHeadRented: Record "Posted Rental Header";
     begin
         Date := Today;
         if not Booked then begin
@@ -68,8 +68,8 @@ table 50050 Comment
 
     trigger OnInsert()
     var
-        RecRenthead: Record Renthead;
-        RecHeadRented: Record RentheadRented;
+        RecRenthead: Record "Rental Header";
+        RecHeadRented: Record "Posted Rental Header";
     begin
         Date := Today;
         if not Booked then begin

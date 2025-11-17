@@ -1,11 +1,11 @@
-page 70061 Rentrow
+page 70061 "Rental Lines"
 {
     PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = Rentrow;
+    SourceTable = "Rental Line";
     Editable = true;
-    Caption = 'Rentrowlist';
+    Caption = 'Rental Lines';
     CardPageId = 70062;
 
     layout
@@ -19,7 +19,7 @@ page 70061 Rentrow
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }

@@ -1,4 +1,4 @@
-page 50051 comments
+page 50051 "Comment List"
 {
     PageType = List;
     ApplicationArea = All;
@@ -6,7 +6,7 @@ page 50051 comments
     SourceTable = Comment;
     Editable = false;
     CardPageId = 50052;
-    Caption = 'Commentlist';
+    Caption = 'Comment List';
 
     layout
     {

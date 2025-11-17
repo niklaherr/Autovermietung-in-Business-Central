@@ -1,11 +1,11 @@
-page 70027 Cars
+page 70027 "Car List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = Car;
     Editable = false;
-    Caption = 'Carlist';
+    Caption = 'Car List';
     CardPageId = 70028;
 
     layout
@@ -19,7 +19,7 @@ page 70027 Cars
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }

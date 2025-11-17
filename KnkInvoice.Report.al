@@ -9,7 +9,7 @@ report 60050 Invoice
 
     dataset
     {
-        dataitem(Rentedhead; RentheadRented)
+        dataitem(Rentedhead; "Posted Rental Header")
         {
             RequestFilterFields = Nr;
 
@@ -126,11 +126,11 @@ report 60050 Invoice
             // {
             // }
 
-            dataitem(RentrowRented; RentrowRented)
+            dataitem(RentrowRented; "Posted Rental Line")
             {
                 DataItemLink = "Headnr" = field(Nr);
 
-                column(Manufactor; Manufactor)
+                column(Manufacturer; Manufacturer)
                 {
                 }
 
@@ -152,7 +152,7 @@ report 60050 Invoice
                         Gesamtpreis += Price;
                         Gesamtkm += "Driven Km";
                     end;
-                    FullCar := Manufactor + ' ' + Model;
+                    FullCar := Manufacturer + ' ' + Model;
                 end;
             }
 

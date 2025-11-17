@@ -1,11 +1,11 @@
-page 70024 Models
+page 70024 "Model List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = Model;
     Editable = false;
-    Caption = 'Modelllist';
+    Caption = 'Model List';
     CardPageId = 70025;
 
     layout
@@ -19,17 +19,17 @@ page 70024 Models
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Manufactoring Start"; Rec."Manufactoring Start")
+                field("Manufacturing Start"; Rec."Manufacturing Start")
                 {
                     ApplicationArea = All;
                 }
 
-                field("Manufactoring Stop"; Rec."Manufactoring Stop")
+                field("Manufacturing Stop"; Rec."Manufacturing Stop")
                 {
                     ApplicationArea = All;
                 }

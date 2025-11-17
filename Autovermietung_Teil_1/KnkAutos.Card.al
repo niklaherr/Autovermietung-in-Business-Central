@@ -1,9 +1,9 @@
-page 70028 Car
+page 70028 "Car Card"
 {
     PageType = Card;
     UsageCategory = Documents;
     SourceTable = Car;
-    Caption = 'Carcard';
+    Caption = 'Car Card';
 
     layout
     {
@@ -16,7 +16,7 @@ page 70028 Car
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }

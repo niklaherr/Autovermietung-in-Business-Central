@@ -1,10 +1,10 @@
-page 60000 RentheadRented
+page 60000 "Posted Rental Header List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = RentheadRented;
-    Caption = 'Rentedlist';
+    SourceTable = "Posted Rental Header";
+    Caption = 'Posted Rental Header List';
     CardPageId = 60001;
     Editable = false;
 

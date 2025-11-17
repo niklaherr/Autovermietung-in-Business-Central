@@ -8,20 +8,20 @@ table 50001 Model
             Caption = 'Model';
         }
 
-        field(2; Manufactor; Code[20])
+        field(2; Manufacturer; Code[20])
         {
-            Caption = 'Manufactor';
-            TableRelation = Manufactor;
+            Caption = 'Manufacturer';
+            TableRelation = Manufacturer;
         }
 
-        field(3; "Manufactoring Start"; Date)
+        field(3; "Manufacturing Start"; Date)
         {
-            Caption = 'Manufactoring Start';
+            Caption = 'Manufacturing Start';
         }
 
-        field(4; "Manufactoring Stop"; Date)
+        field(4; "Manufacturing Stop"; Date)
         {
-            Caption = 'Manufactoring Stop';
+            Caption = 'Manufacturing Stop';
         }
     }
 
@@ -35,7 +35,7 @@ table 50001 Model
 
     fieldgroups
     {
-        fieldgroup(DropDown; Model, "Manufactoring Start", "Manufactoring Stop") { }
+        fieldgroup(DropDown; Model, "Manufacturing Start", "Manufacturing Stop") { }
     }
 
     var
@@ -57,8 +57,8 @@ table 50001 Model
         BaujahrVon: Date;
         BaujahrBis: Date;
     begin
-        BaujahrVon := Rec."Manufactoring Start";
-        BaujahrBis := Rec."Manufactoring Stop";
+        BaujahrVon := Rec."Manufacturing Start";
+        BaujahrBis := Rec."Manufacturing Stop";
 
 
         if (BaujahrVon <> 0D) and (BaujahrBis <> 0D) then begin

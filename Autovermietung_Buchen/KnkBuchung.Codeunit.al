@@ -1,20 +1,20 @@
 codeunit 60003 Book
 {
-    procedure TransferHead(Renthead: Record Renthead)
+    procedure TransferHead(RentalHeader: Record "Rental Header")
     var
-        TransferHead: Record RentheadRented;
+        TransferHead: Record "Posted Rental Header";
         AltCommentRec: Record Comment;
         NeuCommentRec: Record Comment;
     begin
         TransferHead.Init();
-        TransferHead.Customer := Renthead.Customer;
-        TransferHead.Customername := Renthead.Customername;
-        TransferHead.Startdate := Renthead.Startdate;
-        TransferHead.Enddate := Renthead.Enddate;
+        TransferHead.Customer := RentalHeader.Customer;
+        TransferHead.Customername := RentalHeader.Customername;
+        TransferHead.Startdate := RentalHeader.Startdate;
+        TransferHead.Enddate := RentalHeader.Enddate;
         TransferHead."Booking Date" := Today;
         TransferHead.Insert(true);
         AltCommentRec.Reset();
-        AltCommentRec.SetRange(AltCommentRec.Headnr, Renthead.Nr);
+        AltCommentRec.SetRange(AltCommentRec.Headnr, RentalHeader.Nr);
         if AltCommentRec.FindSet(false) then
             repeat
                 NeuCommentRec.Init();
@@ -28,28 +28,28 @@ codeunit 60003 Book
             until AltCommentRec.Next() = 0;
     end;
 
-    procedure TransferRow(Renthead: Record Renthead; Rentrow: Record Rentrow)
+    procedure TransferRow(RentalHeader: Record "Rental Header"; RentalLine: Record "Rental Line")
     var
-        TransferRow: Record RentrowRented;
-        TransferHead: Record RentheadRented;
+        TransferRow: Record "Posted Rental Line";
+        TransferHead: Record "Posted Rental Header";
     begin
         TransferRow.Init();
         if TransferHead.Find('+') then begin
             TransferRow.Headnr := TransferHead.Nr;
         end;
-        TransferRow.Car := Rentrow.Car;
-        TransferRow.Manufactor := Rentrow.Manufactor;
-        TransferRow.Model := Rentrow.Model;
-        TransferRow."Driven Km" := Rentrow."Driven Km";
-        TransferRow.Price := Rentrow.Price;
+        TransferRow.Car := RentalLine.Car;
+        TransferRow.Manufacturer := RentalLine.Manufacturer;
+        TransferRow.Model := RentalLine.Model;
+        TransferRow."Driven Km" := RentalLine."Driven Km";
+        TransferRow.Price := RentalLine.Price;
         TransferRow.Insert(true);
-        Rentrow.Delete;
+        RentalLine.Delete;
     end;
 
-    procedure ClearHead(Renthead: Record Renthead; "Key": Integer)
+    procedure ClearHead(RentalHeader: Record "Rental Header"; "Key": Integer)
     begin
-        if Renthead.Get("Key") then begin
-            Renthead.Delete;
+        if RentalHeader.Get("Key") then begin
+            RentalHeader.Delete;
             Message('Eintrag Gebucht!');
         end;
     end;

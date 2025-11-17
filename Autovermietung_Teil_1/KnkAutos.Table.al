@@ -43,10 +43,10 @@ table 50002 Car
         }
 
 
-        field(2; Manufactor; Code[20])
+        field(2; Manufacturer; Code[20])
         {
-            Caption = 'Manufactor';
-            TableRelation = Manufactor;
+            Caption = 'Manufacturer';
+            TableRelation = Manufacturer;
 
             trigger OnValidate()
             begin
@@ -109,7 +109,7 @@ table 50002 Car
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Number Plate", Manufactor, "Model Description", Color, "Year Of Construction", "Price Per Day", "Price Per 100km Over 15000km") { }
+        fieldgroup(DropDown; "Number Plate", Manufacturer, "Model Description", Color, "Year Of Construction", "Price Per Day", "Price Per 100km Over 15000km") { }
     }
 
     procedure CheckAutoBaujahr()
@@ -120,8 +120,8 @@ table 50002 Car
         AutoBau: Date;
     begin
         if ModelleRec.Get("Model Description") then begin
-            BaujahrVon := ModelleRec."Manufactoring Start";
-            BaujahrBis := ModelleRec."Manufactoring Stop";
+            BaujahrVon := ModelleRec."Manufacturing Start";
+            BaujahrBis := ModelleRec."Manufacturing Stop";
         end;
 
         Autobau := Rec."Year Of Construction";
