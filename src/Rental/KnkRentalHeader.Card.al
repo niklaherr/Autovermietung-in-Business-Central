@@ -21,18 +21,18 @@ page 70052 "KnkRental Header Card"
                     ApplicationArea = All;
                 }
 
-                field(Customername; Rec.Customername)
+                field(CustomerName; Rec.CustomerName)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Startdate; Rec.Startdate)
+                field(StartDate; Rec.StartDate)
                 {
                     ApplicationArea = All;
                 }
 
 
-                field(Enddate; Rec.Enddate)
+                field(EndDate; Rec.EndDate)
                 {
                     ApplicationArea = All;
                 }
@@ -46,7 +46,7 @@ page 70052 "KnkRental Header Card"
                         CommentList: Page "KnkComment List";
                         CommentRec: Record "KnkComment";
                     begin
-                        CommentRec.SetRange(Headnr, Rec.Nr);
+                        CommentRec.SetRange(HeaderNo, Rec.Nr);
                         CommentRec.SetRange(Booked, false);
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
@@ -56,7 +56,7 @@ page 70052 "KnkRental Header Card"
 
             group(RentalLines)
             {
-                part(Zeile; 70061)
+                part(RentalLinesPart; 70061)
                 {
                     ApplicationArea = All;
                     SubPageLink = "HeaderNo" = field(Nr);
@@ -70,7 +70,7 @@ page 70052 "KnkRental Header Card"
     {
         area(Processing)
         {
-            group("Auftrag")
+            group(OrderActions)
             {
                 Caption = 'Order';
                 action("Book Order")

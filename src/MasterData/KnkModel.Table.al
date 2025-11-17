@@ -54,16 +54,16 @@ table 50001 "KnkModel"
 
     local procedure CheckDates()
     var
-        BaujahrVon: Date;
-        BaujahrBis: Date;
+        ManufacturingStartDate: Date;
+        ManufacturingStopDate: Date;
     begin
-        BaujahrVon := Rec."Manufacturing Start";
-        BaujahrBis := Rec."Manufacturing Stop";
+        ManufacturingStartDate := Rec."Manufacturing Start";
+        ManufacturingStopDate := Rec."Manufacturing Stop";
 
 
-        if (BaujahrVon <> 0D) and (BaujahrBis <> 0D) then begin
-            if BaujahrVon > BaujahrBis then begin
-                Error('Das "Baujahr von" darf nicht nach dem "Baujahr bis" liegen.');
+        if (ManufacturingStartDate <> 0D) and (ManufacturingStopDate <> 0D) then begin
+            if ManufacturingStartDate > ManufacturingStopDate then begin
+                Error('The "Manufacturing Start" date must be before the "Manufacturing Stop" date.');
             end;
         end;
     end;

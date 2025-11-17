@@ -1,48 +1,46 @@
-page 70062 "KnkRental Line Card"
+page 70051 "KnkRental Header List"
 {
-    PageType = Card;
+    PageType = List;
+    ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "KnkRental Line";
-    Caption = 'KnkRental Line Card';
+    SourceTable = "KnkRental Header";
+    Caption = 'KnkRental Header List';
+    CardPageId = 70052;
+    Editable = false;
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(Group)
             {
-                field(Nr; Rec.Nr)
-                {
-                    ApplicationArea = All;
-                    Visible = false;
-                }
-
-                field(Headnr; Rec.HeaderNo)
+                field("Nr"; Rec.Nr)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Car; Rec.Car)
+                field(Customer; Rec.Customer)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Manufacturer; Rec.Manufacturer)
+                field(CustomerName; Rec.CustomerName)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Model; Rec.Model)
+                field(StartDate; Rec.StartDate)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Driven Km"; Rec."Driven Km")
+
+                field(EndDate; Rec.EndDate)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Price; Rec.Price)
+                field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;
                 }

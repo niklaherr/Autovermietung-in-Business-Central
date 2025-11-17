@@ -13,7 +13,7 @@ table 50004 "KnkRental Line"
 
         field(2; HeaderNo; Integer)
         {
-            Caption = 'HeaderNo';
+            Caption = 'Header No.';
             TableRelation = "KnkRental Header";
             Editable = false;
         }
@@ -24,17 +24,17 @@ table 50004 "KnkRental Line"
             TableRelation = "KnkCar"."Number Plate";
             trigger OnValidate()
             var
-                Autorec: Record "KnkCar";
+                CarRecord: Record "KnkCar";
                 RentalHeader: Record "KnkRental Header";
             begin
-                if Autorec.Get(Car) then begin
-                    Manufacturer := Autorec.Manufacturer;
-                    Model := Autorec."Model Description";
+                if CarRecord.Get(Car) then begin
+                    Manufacturer := CarRecord.Manufacturer;
+                    Model := CarRecord."Model Description";
                     if RentalHeader.Get(HeaderNo) then begin
-                        Price := Verrechnen(RentalHeader, Rec);
+                        Price := CalculatePrice(RentalHeader, Rec);
                     end;
                 end else begin
-                    Error('Das Auto konnte nicht gefunden werden');
+                    Error('The selected car could not be found.');
                 end;
             end;
         }
@@ -46,7 +46,7 @@ table 50004 "KnkRental Line"
             TableRelation = "KnkCar".Manufacturer;
         }
 
-        field(5; Model; COde[20])
+        field(5; Model; Code[20])
         {
             Caption = 'Model';
             Editable = false;
@@ -61,7 +61,7 @@ table 50004 "KnkRental Line"
                 RentalHeader: Record "KnkRental Header";
             begin
                 if RentalHeader.Get(HeaderNo) then begin
-                    Price := Verrechnen(RentalHeader, Rec);
+                    Price := CalculatePrice(RentalHeader, Rec);
                 end;
             end;
         }
@@ -74,7 +74,7 @@ table 50004 "KnkRental Line"
 
         field(8; PickupDateTime; DateTime)
         {
-            Caption = 'Pickup Date&Time';
+            Caption = 'Pickup Date & Time';
             trigger OnValidate()
             begin
                 IsCarRented();
@@ -83,7 +83,7 @@ table 50004 "KnkRental Line"
 
         field(9; ReturnDateTime; DateTime)
         {
-            Caption = 'Return Date&Time';
+            Caption = 'Return Date & Time';
             trigger OnValidate()
             begin
                 IsCarRented();
@@ -101,27 +101,27 @@ table 50004 "KnkRental Line"
         }
     }
 
-    procedure Verrechnen(RentalHeader: Record "KnkRental Header"; Rentline: Record "KnkRental Line"): Decimal
+    procedure CalculatePrice(RentalHeader: Record "KnkRental Header"; RentLine: Record "KnkRental Line"): Decimal
     var
-        Autorec: Record "KnkCar";
-        Tagespreis: Decimal;
-        RestPreis: Integer;
+        CarRecord: Record "KnkCar";
+        BasePrice: Decimal;
+        AdditionalPrice: Integer;
     begin
-        Tagespreis := 0;
-        if Rentline."Driven Km" > 0 then begin
-            if Autorec.Get(Car) then begin
-                if (RentalHeader.Startdate = 0D) or (RentalHeader.Enddate = 0D) then begin
-                    Error('Bitte füllen Sie beide Datumsfelder aus.');
+        BasePrice := 0;
+        if RentLine."Driven Km" > 0 then begin
+            if CarRecord.Get(Car) then begin
+                if (RentalHeader.StartDate = 0D) or (RentalHeader.EndDate = 0D) then begin
+                    Error('Please fill in both date fields.');
                 end else begin
-                    Tagespreis := (RentalHeader.Enddate - RentalHeader.Startdate) * Autorec."Price Per Day";
-                    if Rentline."Driven Km" > 15000 then begin
-                        RestPreis := Autorec."Price Per 100km Over 15000km" * ((Rentline."Driven Km" - 15000) / 100);
-                        Tagespreis := Tagespreis + RestPreis;
+                    BasePrice := (RentalHeader.EndDate - RentalHeader.StartDate) * CarRecord."Price Per Day";
+                    if RentLine."Driven Km" > 15000 then begin
+                        AdditionalPrice := CarRecord."Price Per 100km Over 15000km" * ((RentLine."Driven Km" - 15000) / 100);
+                        BasePrice := BasePrice + AdditionalPrice;
                     end;
                 end;
             end;
         end;
-        exit(Tagespreis);
+        exit(BasePrice);
     end;
 
     procedure IsCarRented()

@@ -22,18 +22,18 @@ page 60001 "KnkPosted Rental Header Card"
                     ApplicationArea = All;
                 }
 
-                field(Customername; Rec.Customername)
+                field(CustomerName; Rec.CustomerName)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Startdate; Rec.Startdate)
+                field(StartDate; Rec.StartDate)
                 {
                     ApplicationArea = All;
                 }
 
 
-                field(Enddate; Rec.Enddate)
+                field(EndDate; Rec.EndDate)
                 {
                     ApplicationArea = All;
                 }
@@ -53,20 +53,20 @@ page 60001 "KnkPosted Rental Header Card"
                         CommentList: Page "KnkComment List";
                         CommentRec: Record "KnkComment";
                     begin
-                        CommentRec.SetRange(Headnr, Rec.Nr);
+                        CommentRec.SetRange(HeaderNo, Rec.Nr);
                         CommentRec.SetRange(Booked, true);
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;
-                }
+            }
             }
 
             group(RentalLines)
             {
-                part(Zeile; 60002)
+                part(RentalLinesPart; 60002)
                 {
                     ApplicationArea = All;
-                    SubPageLink = "Headnr" = field(Nr);
+                    SubPageLink = "HeaderNo" = field(Nr);
                     UpdatePropagation = Both;
                 }
             }

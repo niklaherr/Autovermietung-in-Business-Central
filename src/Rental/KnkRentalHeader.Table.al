@@ -16,40 +16,40 @@ table 50003 "KnkRental Header"
             TableRelation = Customer."No.";
             trigger OnValidate()
             var
-                KundeRec: Record Customer;
+                CustomerRec: Record Customer;
             begin
-                if KundeRec.Get(Customer) then begin
-                    Customername := KundeRec.Name;
+                if CustomerRec.Get(Customer) then begin
+                    CustomerName := CustomerRec.Name;
                 end
                 else begin
-                    Error('Die Kundennummer konnte nicht gefunden werden');
+                    Error('The customer number could not be found.');
                 end;
             end;
         }
 
-        field(4; Customername; Text[50])
+        field(4; CustomerName; Text[50])
         {
-            Caption = 'Customername';
+            Caption = 'Customer Name';
             Editable = false;
             TableRelation = Customer.Name;
         }
 
-        field(5; Startdate; Date)
+        field(5; StartDate; Date)
         {
             Caption = 'Start Date';
             trigger OnValidate()
             begin
-                DatumCheck();
+                ValidateDates();
                 RecalculateLines(Rec);
             end;
         }
 
-        field(6; Enddate; Date)
+        field(6; EndDate; Date)
         {
-            Caption = 'Enddate';
+            Caption = 'End Date';
             trigger OnValidate()
             begin
-                DatumCheck();
+                ValidateDates();
                 RecalculateLines(Rec);
             end;
         }
@@ -59,7 +59,7 @@ table 50003 "KnkRental Header"
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = count("KnkComment" where(Headnr = field(Nr)));
+            CalcFormula = count("KnkComment" where(HeaderNo = field(Nr)));
         }
     }
 
@@ -73,16 +73,15 @@ table 50003 "KnkRental Header"
 
     fieldgroups
     {
-        fieldgroup(DropDown; Nr, Customername, Startdate, Enddate) { }
+        fieldgroup(DropDown; Nr, CustomerName, StartDate, EndDate) { }
     }
 
-    local procedure DatumCheck()
+    local procedure ValidateDates()
     var
-        myInt: Integer;
     begin
-        if (rec.Startdate <> 0D) and (rec.Enddate <> 0D) then begin
-            if rec.Enddate < rec.Startdate then begin
-                Error('Das Enddatum kann nicht vor dem Startdatum liegen');
+        if (Rec.StartDate <> 0D) and (Rec.EndDate <> 0D) then begin
+            if Rec.EndDate < Rec.StartDate then begin
+                Error('The end date cannot be before the start date.');
             end;
         end;
     end;
@@ -94,7 +93,7 @@ table 50003 "KnkRental Header"
         RentalLine.SetRange(HeaderNo, Nr);
         if RentalLine.FindSet(false) then
             repeat
-                RentalLine.Price := RentalLine.Verrechnen(RentalHeaderRec, RentalLine);
+                RentalLine.Price := RentalLine.CalculatePrice(RentalHeaderRec, RentalLine);
                 RentalLine.Modify(false);
             until RentalLine.Next() = 0;
     end;

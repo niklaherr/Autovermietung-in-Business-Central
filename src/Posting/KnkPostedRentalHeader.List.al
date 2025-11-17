@@ -24,18 +24,18 @@ page 60000 "KnkPosted Rental Header List"
                     ApplicationArea = All;
                 }
 
-                field(Customername; Rec.Customername)
+                field(CustomerName; Rec.CustomerName)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Startdate; Rec.Startdate)
+                field(StartDate; Rec.StartDate)
                 {
                     ApplicationArea = All;
                 }
 
 
-                field(Enddate; Rec.Enddate)
+                field(EndDate; Rec.EndDate)
                 {
                     ApplicationArea = All;
                 }

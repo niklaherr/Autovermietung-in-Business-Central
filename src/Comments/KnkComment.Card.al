@@ -12,7 +12,7 @@ page 50052 "KnkComment Card"
         {
             group(General)
             {
-                field(Headnr; Rec.Headnr)
+                field(HeaderNo; Rec.HeaderNo)
                 {
                     ApplicationArea = All;
                     Editable = false;

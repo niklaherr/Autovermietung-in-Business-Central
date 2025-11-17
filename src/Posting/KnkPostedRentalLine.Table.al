@@ -10,9 +10,9 @@ table 50006 "KnkPosted Rental Line"
             AutoIncrement = true;
         }
 
-        field(2; Headnr; Integer)
+        field(2; HeaderNo; Integer)
         {
-            Caption = 'Headnr';
+            Caption = 'Header No.';
             Editable = false;
         }
 
@@ -51,7 +51,7 @@ table 50006 "KnkPosted Rental Line"
     keys
     {
         key(PrimaryKey;
-        Nr, Headnr)
+        Nr, HeaderNo)
         {
             Clustered = true;
         }

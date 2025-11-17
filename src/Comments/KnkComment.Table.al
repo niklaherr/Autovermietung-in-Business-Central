@@ -4,9 +4,9 @@ table 50050 "KnkComment"
 
     fields
     {
-        field(1; Headnr; Integer)
+        field(1; HeaderNo; Integer)
         {
-            Caption = 'Headnr';
+            Caption = 'Header No.';
             DataClassification = ToBeClassified;
             TableRelation = "KnkRental Header";
         }
@@ -39,7 +39,7 @@ table 50050 "KnkComment"
 
     keys
     {
-        key(PrimaryKey; Nr, Headnr)
+        key(PrimaryKey; Nr, HeaderNo)
         {
             Clustered = true;
         }
@@ -47,37 +47,37 @@ table 50050 "KnkComment"
 
     fieldgroups
     {
-        fieldgroup(DropDown; Headnr, Booked, Date) { }
+        fieldgroup(DropDown; HeaderNo, Booked, Date) { }
     }
 
     trigger OnModify()
     var
-        RecRenthead: Record "KnkRental Header";
-        RecHeadRented: Record "KnkPosted Rental Header";
+        RentalHeaderRec: Record "KnkRental Header";
+        PostedRentalHeaderRec: Record "KnkPosted Rental Header";
     begin
         Date := Today;
         if not Booked then begin
-            RecRenthead.Get(Headnr);
-            RecRenthead.CalcFields(Comment)
+            RentalHeaderRec.Get(HeaderNo);
+            RentalHeaderRec.CalcFields(Comment)
         end else begin
-            RecHeadRented.Get(Headnr);
-            RecHeadRented.CalcFields(Comment)
+            PostedRentalHeaderRec.Get(HeaderNo);
+            PostedRentalHeaderRec.CalcFields(Comment)
         end;
     end;
 
 
     trigger OnInsert()
     var
-        RecRenthead: Record "KnkRental Header";
-        RecHeadRented: Record "KnkPosted Rental Header";
+        RentalHeaderRec: Record "KnkRental Header";
+        PostedRentalHeaderRec: Record "KnkPosted Rental Header";
     begin
         Date := Today;
         if not Booked then begin
-            RecRenthead.Get(Headnr);
-            RecRenthead.CalcFields(Comment)
+            RentalHeaderRec.Get(HeaderNo);
+            RentalHeaderRec.CalcFields(Comment)
         end else begin
-            RecHeadRented.Get(Headnr);
-            RecHeadRented.CalcFields(Comment)
+            PostedRentalHeaderRec.Get(HeaderNo);
+            PostedRentalHeaderRec.CalcFields(Comment)
         end;
     end;
 }

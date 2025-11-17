@@ -14,7 +14,7 @@ page 50051 "KnkComment List"
         {
             repeater(Group)
             {
-                field(Headnr; Rec.Headnr)
+                field(HeaderNo; Rec.HeaderNo)
                 {
                     ApplicationArea = All;
                 }

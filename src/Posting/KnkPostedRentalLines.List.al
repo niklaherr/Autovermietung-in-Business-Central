@@ -18,7 +18,7 @@ page 60002 "KnkPosted Rental Lines"
                     ApplicationArea = All;
                 }
 
-                field(Headnr; Rec.Headnr)
+                field(HeaderNo; Rec.HeaderNo)
                 {
                     ApplicationArea = All;
                 }

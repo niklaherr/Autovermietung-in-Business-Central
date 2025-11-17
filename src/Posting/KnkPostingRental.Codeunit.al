@@ -3,29 +3,29 @@ codeunit 60003 "KnkPosting Rental"
     procedure TransferHead(RentalHeader: Record "KnkRental Header")
     var
         TransferHead: Record "KnkPosted Rental Header";
-        AltCommentRec: Record "KnkComment";
-        NeuCommentRec: Record "KnkComment";
+        SourceCommentRec: Record "KnkComment";
+        TargetCommentRec: Record "KnkComment";
     begin
         TransferHead.Init();
         TransferHead.Customer := RentalHeader.Customer;
-        TransferHead.Customername := RentalHeader.Customername;
-        TransferHead.Startdate := RentalHeader.Startdate;
-        TransferHead.Enddate := RentalHeader.Enddate;
+        TransferHead.CustomerName := RentalHeader.CustomerName;
+        TransferHead.StartDate := RentalHeader.StartDate;
+        TransferHead.EndDate := RentalHeader.EndDate;
         TransferHead."Booking Date" := Today;
         TransferHead.Insert(true);
-        AltCommentRec.Reset();
-        AltCommentRec.SetRange(AltCommentRec.Headnr, RentalHeader.Nr);
-        if AltCommentRec.FindSet(false) then
+        SourceCommentRec.Reset();
+        SourceCommentRec.SetRange(SourceCommentRec.HeaderNo, RentalHeader.Nr);
+        if SourceCommentRec.FindSet(false) then
             repeat
-                NeuCommentRec.Init();
-                NeuCommentRec.Nr := 0;
-                NeuCommentRec.Headnr := TransferHead.Nr;
-                NeuCommentRec.Comment := AltCommentRec.Comment;
-                NeuCommentRec.Booked := true;
-                NeuCommentRec.Date := AltCommentRec.Date;
-                NeuCommentRec.Insert(true);
-                AltCommentRec.Delete();
-            until AltCommentRec.Next() = 0;
+                TargetCommentRec.Init();
+                TargetCommentRec.Nr := 0;
+                TargetCommentRec.HeaderNo := TransferHead.Nr;
+                TargetCommentRec.Comment := SourceCommentRec.Comment;
+                TargetCommentRec.Booked := true;
+                TargetCommentRec.Date := SourceCommentRec.Date;
+                TargetCommentRec.Insert(true);
+                SourceCommentRec.Delete();
+            until SourceCommentRec.Next() = 0;
     end;
 
     procedure TransferRow(RentalHeader: Record "KnkRental Header"; RentalLine: Record "KnkRental Line")
@@ -35,7 +35,7 @@ codeunit 60003 "KnkPosting Rental"
     begin
         TransferRow.Init();
         if TransferHead.Find('+') then begin
-            TransferRow.Headnr := TransferHead.Nr;
+            TransferRow.HeaderNo := TransferHead.Nr;
         end;
         TransferRow.Car := RentalLine.Car;
         TransferRow.Manufacturer := RentalLine.Manufacturer;
@@ -50,7 +50,7 @@ codeunit 60003 "KnkPosting Rental"
     begin
         if RentalHeader.Get("Key") then begin
             RentalHeader.Delete;
-            Message('Eintrag Gebucht!');
+            Message('Rental successfully posted.');
         end;
     end;
 }

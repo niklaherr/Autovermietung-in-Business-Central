@@ -14,31 +14,31 @@ table 50002 "KnkCar"
             begin
                 IsValid := true;
 
-                // Prüfe die ersten zwei Zeichen auf Großbuchstaben
+                // Validate the first two characters are capital letters
                 for i := 1 to 2 do
                     if not IsLetter("Number Plate"[i]) then
                         IsValid := false;
 
-                // Prüfe das 3. Zeichen auf einen Bindestrich
+                // Validate the third character is a dash
                 if "Number Plate"[3] <> '-' then
                     IsValid := false;
 
-                // Prüfe die nächsten zwei Zeichen auf Großbuchstaben
+                // Validate the next two characters are capital letters
                 for i := 4 to 5 do
                     if not IsLetter("Number Plate"[i]) then
                         IsValid := false;
 
-                // Prüfe das 6. Zeichen auf einen Bindestrich
+                // Validate the sixth character is a dash
                 if "Number Plate"[6] <> '-' then
                     IsValid := false;
 
-                // Prüfe die letzten vier Zeichen auf Ziffern
+                // Validate the last four characters are digits
                 for i := 7 to 10 do
                     if not IsDigit("Number Plate"[i]) then
                         IsValid := false;
 
                 if not IsValid then
-                    Error('Das Kennzeichen muss dem Format "JB-HS-9187" entsprechen.');
+                    Error('The license plate must match the "JB-HS-9187" format.');
             end;
         }
 
@@ -59,14 +59,6 @@ table 50002 "KnkCar"
         {
             Caption = 'Model Description';
             TableRelation = "KnkModel";
-
-            /*trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                Rec.Hersteller := '';
-                Rec.Modify();
-            end;*/
         }
 
         field(4; Color; enum KnkColor)
@@ -76,10 +68,10 @@ table 50002 "KnkCar"
 
         field(5; "Year Of Construction"; Date)
         {
-            Caption = 'Year Of Contruction';
+            Caption = 'Year Of Construction';
             trigger OnValidate()
             begin
-                CheckAutoBaujahr();
+                ValidateManufacturingYear();
             end;
         }
 
@@ -112,40 +104,40 @@ table 50002 "KnkCar"
         fieldgroup(DropDown; "Number Plate", Manufacturer, "Model Description", Color, "Year Of Construction", "Price Per Day", "Price Per 100km Over 15000km") { }
     }
 
-    procedure CheckAutoBaujahr()
+    procedure ValidateManufacturingYear()
     var
-        ModelleRec: Record "KnkModel";
-        BaujahrVon: Date;
-        BaujahrBis: Date;
-        AutoBau: Date;
+        ModelRecord: Record "KnkModel";
+        ManufacturingStart: Date;
+        ManufacturingStop: Date;
+        CarManufacturingDate: Date;
     begin
-        if ModelleRec.Get("Model Description") then begin
-            BaujahrVon := ModelleRec."Manufacturing Start";
-            BaujahrBis := ModelleRec."Manufacturing Stop";
+        if ModelRecord.Get("Model Description") then begin
+            ManufacturingStart := ModelRecord."Manufacturing Start";
+            ManufacturingStop := ModelRecord."Manufacturing Stop";
         end;
 
-        Autobau := Rec."Year Of Construction";
+        CarManufacturingDate := Rec."Year Of Construction";
 
-        if (BaujahrVon = 0D) and (BaujahrBis = 0D) then begin
-            Error('Bitte Daten Eingeben');
+        if (ManufacturingStart = 0D) and (ManufacturingStop = 0D) then begin
+            Error('Please maintain the manufacturing period for the selected model.');
         end;
 
-        if (BaujahrVon = 0D) xor (BaujahrBis = 0D) then begin
-            if BaujahrBis = 0D then begin
-                if AutoBau < BaujahrVon then begin
-                    Error('Auto kann nicht vor offiziellem Baujahr hergestellt sein');
+        if (ManufacturingStart = 0D) xor (ManufacturingStop = 0D) then begin
+            if ManufacturingStop = 0D then begin
+                if CarManufacturingDate < ManufacturingStart then begin
+                    Error('The car cannot be manufactured before the official start date.');
                 end;
-            end else if AutoBau > BaujahrBis then begin
-                Error('Auto kann nicht nach offiziellem Baujahr hergestellt sein');
+            end else if CarManufacturingDate > ManufacturingStop then begin
+                Error('The car cannot be manufactured after the official stop date.');
             end;
         end;
 
-        if (BaujahrVon <> 0D) and (BaujahrBis <> 0D) then begin
-            if AutoBau < BaujahrVon then begin
-                Error('Auto kann nicht vor offiziellem Baujahr hergestellt sein');
+        if (ManufacturingStart <> 0D) and (ManufacturingStop <> 0D) then begin
+            if CarManufacturingDate < ManufacturingStart then begin
+                Error('The car cannot be manufactured before the official start date.');
             end;
-            if AutoBau > BaujahrBis then begin
-                Error('Auto kann nicht nach offiziellem Baujahr hergestellt sein');
+            if CarManufacturingDate > ManufacturingStop then begin
+                Error('The car cannot be manufactured after the official stop date.');
             end;
         end;
     end;

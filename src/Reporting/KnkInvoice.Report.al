@@ -1,7 +1,7 @@
 report 60050 Invoice
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './KnkCarRentalInvoice.rdlc';
+    RDLCLayout = './src/Reporting/KnkCarRentalInvoice.rdlc';
     Caption = 'Invoice';
     UsageCategory = Documents;
     ApplicationArea = All;
@@ -21,15 +21,15 @@ report 60050 Invoice
             {
             }
 
-            column(Customername; Customername)
+            column(CustomerName; CustomerName)
             {
             }
 
-            column(Startdate; Startdate)
+            column(StartDate; StartDate)
             {
             }
 
-            column(Enddate; Enddate)
+            column(EndDate; EndDate)
             {
             }
 
@@ -41,19 +41,19 @@ report 60050 Invoice
             {
             }
 
-            column(CompanyName; Firmendaten.Name)
+            column(CompanyName; CompanyInfoRec.Name)
             {
             }
 
-            column(CompanyAddress; Firmendaten.Address)
+            column(CompanyAddress; CompanyInfoRec.Address)
             {
             }
 
-            column(CompanyCity; Firmendaten.City)
+            column(CompanyCity; CompanyInfoRec.City)
             {
             }
 
-            column(CompanyPost_Code; Firmendaten."Post Code")
+            column(CompanyPost_Code; CompanyInfoRec."Post Code")
             {
             }
 
@@ -90,7 +90,7 @@ report 60050 Invoice
             {
             }
 
-            column(Color; CarTable.color)
+            column(Color; CarTable.Color)
             {
             }
 
@@ -110,11 +110,11 @@ report 60050 Invoice
             {
             }
 
-            column(Gesamtpreis; Gesamtpreis)
+            column(TotalPrice; TotalPrice)
             {
             }
 
-            column(Gesamtkm; Gesamtkm)
+            column(TotalKm; TotalKm)
             {
             }
 
@@ -128,7 +128,7 @@ report 60050 Invoice
 
             dataitem(RentrowRented; "KnkPosted Rental Line")
             {
-                DataItemLink = "Headnr" = field(Nr);
+                DataItemLink = "HeaderNo" = field(Nr);
 
                 column(Manufacturer; Manufacturer)
                 {
@@ -148,9 +148,9 @@ report 60050 Invoice
 
                 trigger OnAfterGetRecord()
                 begin
-                    if CarTable.get(RentrowRented.Car) then begin
-                        Gesamtpreis += Price;
-                        Gesamtkm += "Driven Km";
+                    if CarTable.Get(RentrowRented.Car) then begin
+                        TotalPrice += Price;
+                        TotalKm += "Driven Km";
                     end;
                     FullCar := Manufacturer + ' ' + Model;
                 end;
@@ -159,7 +159,7 @@ report 60050 Invoice
 
             dataitem(Commentdata; "KnkComment")
             {
-                DataItemLink = "Headnr" = field(Nr);
+                DataItemLink = "HeaderNo" = field(Nr);
                 column(Comment; Comment)
                 {
                 }
@@ -171,32 +171,31 @@ report 60050 Invoice
 
             trigger OnAfterGetRecord()
             begin
-                CustomerRec.get(Rentedhead.Customer);
-                // CommentRec.get(Rentedhead.Nr);
-                CompanyBlock := Firmendaten.Name + GetCRLF() +
-                                Firmendaten.Address + GetCRLF() +
-                                Firmendaten."Post Code" + ' ' + Firmendaten.City;
+                CustomerRec.Get(Rentedhead.Customer);
+                CompanyBlock := CompanyInfoRec.Name + GetCRLF() +
+                                CompanyInfoRec.Address + GetCRLF() +
+                                CompanyInfoRec."Post Code" + ' ' + CompanyInfoRec.City;
 
-                CustomerBlock := Customername + GetCRLF() +
+                CustomerBlock := CustomerName + GetCRLF() +
                                  CustomerRec.Address + GetCRLF() +
                                  CustomerRec."Post Code" + ' ' + CustomerRec.City;
 
-                CustomerPreInfo := 'Ihre Kundennummer: ' + GetCRLF() +
-                                'Belegsdatum:       ' + GetCRLF() +
-                                'Rechnungsnummer:   ' + GetCRLF() + GetCRLF() +
-                                'Startdatum:        ' + GetCRLF() +
-                                'Enddatum:          ';
+                CustomerPreInfo := 'Customer No.:      ' + GetCRLF() +
+                                   'Booking Date:      ' + GetCRLF() +
+                                   'Invoice No.:      ' + GetCRLF() + GetCRLF() +
+                                   'Start Date:       ' + GetCRLF() +
+                                   'End Date:         ';
 
                 CustomerInfo := Customer + GetCRLF() +
                                 Format("Booking Date") + GetCRLF() +
                                 Format(Nr) + GetCRLF() + GetCRLF() +
-                                Format(Startdate) + GetCRLF() +
-                                Format(Enddate);
+                                Format(StartDate) + GetCRLF() +
+                                Format(EndDate);
             end;
 
             trigger OnPreDataItem()
             begin
-                Firmendaten.get();
+                CompanyInfoRec.Get();
             end;
         }
     }
@@ -204,10 +203,9 @@ report 60050 Invoice
 
     var
         Demo: Label 'Bameninghong';
-        Gesamtpreis: Decimal;
-        Gesamtkm: Decimal;
-        Heute: Date;
-        Firmendaten: Record "Company Information";
+        TotalPrice: Decimal;
+        TotalKm: Decimal;
+        CompanyInfoRec: Record "Company Information";
         CustomerRec: Record Customer;
         CarTable: Record "KnkCar";
         CompanyBlock: Text[200];
