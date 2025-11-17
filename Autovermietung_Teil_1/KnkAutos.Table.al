@@ -46,7 +46,7 @@ table 50002 Car
         field(2; Manufacturer; Code[20])
         {
             Caption = 'Manufacturer';
-            TableRelation = Manufacturer;
+            TableRelation = "Knk Manufacturer";
 
             trigger OnValidate()
             begin

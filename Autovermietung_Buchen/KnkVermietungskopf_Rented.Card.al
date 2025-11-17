@@ -50,8 +50,8 @@ page 60001 "Posted Rental Header Card"
 
                     trigger OnDrillDown()
                     var
-                        CommentList: Page "Comment List";
-                        CommentRec: Record Comment;
+                        CommentList: Page "Knk Comment List";
+                        CommentRec: Record "Knk Comment";
                     begin
                         CommentRec.SetRange(Headnr, Rec.Nr);
                         CommentRec.SetRange(Booked, true);

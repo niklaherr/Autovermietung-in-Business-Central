@@ -17,7 +17,7 @@ page 70062 "Rental Line Card"
                     Visible = false;
                 }
 
-                field(Headnr; Rec.Headnr)
+                field(Headnr; Rec.HeaderNo)
                 {
                     ApplicationArea = All;
                 }

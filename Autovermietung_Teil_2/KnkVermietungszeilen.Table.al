@@ -13,7 +13,7 @@ table 50004 "Rental Line"
 
         field(2; HeaderNo; Integer)
         {
-            Caption = 'Headnr';
+            Caption = 'HeaderNo';
             TableRelation = "Rental Header";
             Editable = false;
         }
@@ -30,7 +30,7 @@ table 50004 "Rental Line"
                 if Autorec.Get(Car) then begin
                     Manufacturer := Autorec.Manufacturer;
                     Model := Autorec."Model Description";
-                    if RentalHeader.Get(Headnr) then begin
+                    if RentalHeader.Get(HeaderNo) then begin
                         Price := Verrechnen(RentalHeader, Rec);
                     end;
                 end else begin
@@ -60,7 +60,7 @@ table 50004 "Rental Line"
             var
                 RentalHeader: Record "Rental Header";
             begin
-                if RentalHeader.Get(Headnr) then begin
+                if RentalHeader.Get(HeaderNo) then begin
                     Price := Verrechnen(RentalHeader, Rec);
                 end;
             end;
@@ -95,7 +95,7 @@ table 50004 "Rental Line"
     keys
     {
         key(PrimaryKey;
-        Nr, Headnr)
+        Nr, HeaderNo)
         {
             Clustered = true;
         }

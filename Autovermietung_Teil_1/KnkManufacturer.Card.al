@@ -1,18 +1,15 @@
-page 70021 Manufacturers
+page 70022 "Knk Manufacturer Card"
 {
-    PageType = List;
-    ApplicationArea = All;
+    PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Manufacturer;
-    Editable = false;
-    Caption = 'Manufacturer List';
-    CardPageId = 70022;
+    SourceTable = "Knk Manufacturer";
+    Caption = 'Knk Manufacturer Card';
 
     layout
     {
         area(Content)
         {
-            repeater(Group)
+            group(General)
             {
                 field(Name; Rec.Name)
                 {

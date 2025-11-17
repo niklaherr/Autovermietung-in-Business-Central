@@ -157,7 +157,7 @@ report 60050 Invoice
             }
 
 
-            dataitem(Commentdata; Comment)
+            dataitem(Commentdata; "Knk Comment")
             {
                 DataItemLink = "Headnr" = field(Nr);
                 column(Comment; Comment)
@@ -215,7 +215,7 @@ report 60050 Invoice
         CustomerPreInfo: Text[200];
         CustomerInfo: Text[200];
         FullCar: Text[200];
-        CommentRec: Record Comment;
+        CommentRec: Record "Knk Comment";
 
     local procedure GetCRLF(): Text
     var

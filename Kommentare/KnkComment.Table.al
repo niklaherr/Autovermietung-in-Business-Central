@@ -1,4 +1,4 @@
-table 50050 Comment
+table 50050 "Knk Comment"
 {
     DataClassification = ToBeClassified;
 

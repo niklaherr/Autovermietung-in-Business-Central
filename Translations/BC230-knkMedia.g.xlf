@@ -46,27 +46,27 @@
         <trans-unit id="Table 2790486453 - Field 775734828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booked</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Booked - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Booked - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Comment - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Date - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 267268504 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Headnr</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Headnr - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Headnr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2790486453 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Comment - Field Nr - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Knk Comment - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 235073672 - Field 449962110 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Class Teacher</source>
@@ -466,12 +466,12 @@
         <trans-unit id="Page 2998405077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page comment - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment List</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page comments - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Knk Comment List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2963382932 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lecture Card</source>

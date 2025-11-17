@@ -3,8 +3,8 @@ codeunit 60003 Book
     procedure TransferHead(RentalHeader: Record "Rental Header")
     var
         TransferHead: Record "Posted Rental Header";
-        AltCommentRec: Record Comment;
-        NeuCommentRec: Record Comment;
+        AltCommentRec: Record "Knk Comment";
+        NeuCommentRec: Record "Knk Comment";
     begin
         TransferHead.Init();
         TransferHead.Customer := RentalHeader.Customer;

@@ -11,7 +11,7 @@ table 50001 Model
         field(2; Manufacturer; Code[20])
         {
             Caption = 'Manufacturer';
-            TableRelation = Manufacturer;
+            TableRelation = "Knk Manufacturer";
         }
 
         field(3; "Manufacturing Start"; Date)
