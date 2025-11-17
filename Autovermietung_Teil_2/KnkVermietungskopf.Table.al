@@ -91,7 +91,7 @@ table 50003 "Rental Header"
     var
         RentalLine: Record "Rental Line";
     begin
-        RentalLine.SetRange(Headnr, Nr);
+        RentalLine.SetRange(HeaderNo, Nr);
         if RentalLine.FindSet(false) then
             repeat
                 RentalLine.Price := RentalLine.Verrechnen(RentalHeaderRec, RentalLine);

@@ -59,7 +59,7 @@ page 70052 "Rental Header Card"
                 part(Zeile; 70061)
                 {
                     ApplicationArea = All;
-                    SubPageLink = "Headnr" = field(Nr);
+                    SubPageLink = "HeaderNo" = field(Nr);
                     UpdatePropagation = Both;
                 }
             }
@@ -87,7 +87,7 @@ page 70052 "Rental Header Card"
                         NewNumber: Record "Posted Rental Header";
                     begin
                         Book.TransferHead(Rec);
-                        Rentrow.SetRange(Headnr, Rec.Nr);
+                        Rentrow.SetRange(HeaderNo, Rec.Nr);
                         if Rentrow.FindSet(false) then
                             repeat
                                 Book.TransferRow(Rec, Rentrow);
