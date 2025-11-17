@@ -1,4 +1,4 @@
-enum 70002 Color
+enum 70002 "KnkColor"
 {
     Extensible = true;
 

@@ -1,9 +1,10 @@
-page 70052 "Rental Header Card"
+page 60001 "KnkPosted Rental Header Card"
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = "Rental Header";
-    Caption = 'Rental Header Card';
+    SourceTable = "KnkPosted Rental Header";
+    Caption = 'KnkPosted Rental Header Card';
+    Editable = false;
 
     layout
     {
@@ -37,17 +38,23 @@ page 70052 "Rental Header Card"
                     ApplicationArea = All;
                 }
 
+                field("Booking Date"; Rec."Booking Date")
+                {
+                    ApplicationArea = All;
+                }
+
+
                 field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;
 
                     trigger OnDrillDown()
                     var
-                        CommentList: Page "Knk Comment List";
-                        CommentRec: Record "Knk Comment";
+                        CommentList: Page "KnkComment List";
+                        CommentRec: Record "KnkComment";
                     begin
                         CommentRec.SetRange(Headnr, Rec.Nr);
-                        CommentRec.SetRange(Booked, false);
+                        CommentRec.SetRange(Booked, true);
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;
@@ -56,10 +63,10 @@ page 70052 "Rental Header Card"
 
             group(RentalLines)
             {
-                part(Zeile; 70061)
+                part(Zeile; 60002)
                 {
                     ApplicationArea = All;
-                    SubPageLink = "HeaderNo" = field(Nr);
+                    SubPageLink = "Headnr" = field(Nr);
                     UpdatePropagation = Both;
                 }
             }
@@ -70,29 +77,25 @@ page 70052 "Rental Header Card"
     {
         area(Processing)
         {
-            group("Auftrag")
+            group("Report")
             {
-                Caption = 'Order';
-                action("Book Order")
+                Caption = 'Report';
+                action("Print Order")
                 {
                     ApplicationArea = All;
-                    Caption = 'Book Order';
+                    Caption = 'Print Order';
                     Promoted = true;
                     PromotedCategory = Process;
 
                     trigger OnAction()
                     var
-                        Book: Codeunit Book;
-                        Rentrow: Record "Rental Line";
-                        NewNumber: Record "Posted Rental Header";
+                        MyCustumReport: Report Invoice;
+                        RentheadRented: Record "KnkPosted Rental Header";
                     begin
-                        Book.TransferHead(Rec);
-                        Rentrow.SetRange(HeaderNo, Rec.Nr);
-                        if Rentrow.FindSet(false) then
-                            repeat
-                                Book.TransferRow(Rec, Rentrow);
-                            until Rentrow.Next() = 0;
-                        Book.ClearHead(Rec, Rec.Nr);
+                        // MyCustumReport.Run();
+                        RentheadRented := Rec;
+                        RentheadRented.SetRecFilter();
+                        Report.Run(Report::Invoice, true, false, RentheadRented);
                     end;
                 }
             }

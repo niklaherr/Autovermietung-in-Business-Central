@@ -1,12 +1,12 @@
-page 70061 "Rental Lines"
+page 70024 "KnkModel List"
 {
-    PageType = ListPart;
+    PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "Rental Line";
-    Editable = true;
-    Caption = 'Rental Lines';
-    CardPageId = 70062;
+    SourceTable = "KnkModel";
+    Editable = false;
+    Caption = 'KnkModel List';
+    CardPageId = 70025;
 
     layout
     {
@@ -14,7 +14,7 @@ page 70061 "Rental Lines"
         {
             repeater(Group)
             {
-                field(Car; Rec.Car)
+                field(Model; Rec.Model)
                 {
                     ApplicationArea = All;
                 }
@@ -24,17 +24,12 @@ page 70061 "Rental Lines"
                     ApplicationArea = All;
                 }
 
-                field(Model; Rec.Model)
+                field("Manufacturing Start"; Rec."Manufacturing Start")
                 {
                     ApplicationArea = All;
                 }
 
-                field("Driven Km"; Rec."Driven Km")
-                {
-                    ApplicationArea = All;
-                }
-
-                field(Price; Rec.Price)
+                field("Manufacturing Stop"; Rec."Manufacturing Stop")
                 {
                     ApplicationArea = All;
                 }

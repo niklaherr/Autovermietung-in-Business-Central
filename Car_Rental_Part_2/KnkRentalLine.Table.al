@@ -1,4 +1,4 @@
-table 50004 "Rental Line"
+table 50004 "KnkRental Line"
 {
 
     fields
@@ -14,18 +14,18 @@ table 50004 "Rental Line"
         field(2; HeaderNo; Integer)
         {
             Caption = 'HeaderNo';
-            TableRelation = "Rental Header";
+            TableRelation = "KnkRental Header";
             Editable = false;
         }
 
         field(3; Car; Code[20])
         {
             Caption = 'Car';
-            TableRelation = Car."Number Plate";
+            TableRelation = "KnkCar"."Number Plate";
             trigger OnValidate()
             var
-                Autorec: Record Car;
-                RentalHeader: Record "Rental Header";
+                Autorec: Record "KnkCar";
+                RentalHeader: Record "KnkRental Header";
             begin
                 if Autorec.Get(Car) then begin
                     Manufacturer := Autorec.Manufacturer;
@@ -43,14 +43,14 @@ table 50004 "Rental Line"
         {
             Caption = 'Manufacturer';
             Editable = false;
-            TableRelation = Car.Manufacturer;
+            TableRelation = "KnkCar".Manufacturer;
         }
 
         field(5; Model; COde[20])
         {
             Caption = 'Model';
             Editable = false;
-            TableRelation = car."Model Description";
+            TableRelation = "KnkCar"."Model Description";
         }
 
         field(6; "Driven Km"; Integer)
@@ -58,7 +58,7 @@ table 50004 "Rental Line"
             Caption = 'Driven Km';
             trigger OnValidate()
             var
-                RentalHeader: Record "Rental Header";
+                RentalHeader: Record "KnkRental Header";
             begin
                 if RentalHeader.Get(HeaderNo) then begin
                     Price := Verrechnen(RentalHeader, Rec);
@@ -101,9 +101,9 @@ table 50004 "Rental Line"
         }
     }
 
-    procedure Verrechnen(RentalHeader: Record "Rental Header"; Rentline: Record "Rental Line"): Decimal
+    procedure Verrechnen(RentalHeader: Record "KnkRental Header"; Rentline: Record "KnkRental Line"): Decimal
     var
-        Autorec: Record car;
+        Autorec: Record "KnkCar";
         Tagespreis: Decimal;
         RestPreis: Integer;
     begin
@@ -126,7 +126,7 @@ table 50004 "Rental Line"
 
     procedure IsCarRented()
     var
-        RentalLine: Record "Rental Line";
+        RentalLine: Record "KnkRental Line";
         AlreadyRentedLbl: Label 'The selected vehicle is already rented in another rental contract!';
     begin
         // Check if both required fields aren't empty

@@ -1,4 +1,4 @@
-table 50000 "Knk Manufacturer"
+table 50000 "KnkManufacturer"
 {
 
     fields

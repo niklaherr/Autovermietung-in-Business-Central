@@ -1,10 +1,10 @@
-codeunit 60003 Book
+codeunit 60003 "KnkPosting Rental"
 {
-    procedure TransferHead(RentalHeader: Record "Rental Header")
+    procedure TransferHead(RentalHeader: Record "KnkRental Header")
     var
-        TransferHead: Record "Posted Rental Header";
-        AltCommentRec: Record "Knk Comment";
-        NeuCommentRec: Record "Knk Comment";
+        TransferHead: Record "KnkPosted Rental Header";
+        AltCommentRec: Record "KnkComment";
+        NeuCommentRec: Record "KnkComment";
     begin
         TransferHead.Init();
         TransferHead.Customer := RentalHeader.Customer;
@@ -28,10 +28,10 @@ codeunit 60003 Book
             until AltCommentRec.Next() = 0;
     end;
 
-    procedure TransferRow(RentalHeader: Record "Rental Header"; RentalLine: Record "Rental Line")
+    procedure TransferRow(RentalHeader: Record "KnkRental Header"; RentalLine: Record "KnkRental Line")
     var
-        TransferRow: Record "Posted Rental Line";
-        TransferHead: Record "Posted Rental Header";
+        TransferRow: Record "KnkPosted Rental Line";
+        TransferHead: Record "KnkPosted Rental Header";
     begin
         TransferRow.Init();
         if TransferHead.Find('+') then begin
@@ -46,7 +46,7 @@ codeunit 60003 Book
         RentalLine.Delete;
     end;
 
-    procedure ClearHead(RentalHeader: Record "Rental Header"; "Key": Integer)
+    procedure ClearHead(RentalHeader: Record "KnkRental Header"; "Key": Integer)
     begin
         if RentalHeader.Get("Key") then begin
             RentalHeader.Delete;

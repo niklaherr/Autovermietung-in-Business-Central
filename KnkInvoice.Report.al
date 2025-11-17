@@ -9,7 +9,7 @@ report 60050 Invoice
 
     dataset
     {
-        dataitem(Rentedhead; "Posted Rental Header")
+        dataitem(Rentedhead; "KnkPosted Rental Header")
         {
             RequestFilterFields = Nr;
 
@@ -126,7 +126,7 @@ report 60050 Invoice
             // {
             // }
 
-            dataitem(RentrowRented; "Posted Rental Line")
+            dataitem(RentrowRented; "KnkPosted Rental Line")
             {
                 DataItemLink = "Headnr" = field(Nr);
 
@@ -157,7 +157,7 @@ report 60050 Invoice
             }
 
 
-            dataitem(Commentdata; "Knk Comment")
+            dataitem(Commentdata; "KnkComment")
             {
                 DataItemLink = "Headnr" = field(Nr);
                 column(Comment; Comment)
@@ -209,13 +209,13 @@ report 60050 Invoice
         Heute: Date;
         Firmendaten: Record "Company Information";
         CustomerRec: Record Customer;
-        CarTable: Record Car;
+        CarTable: Record "KnkCar";
         CompanyBlock: Text[200];
         CustomerBlock: Text[200];
         CustomerPreInfo: Text[200];
         CustomerInfo: Text[200];
         FullCar: Text[200];
-        CommentRec: Record "Knk Comment";
+        CommentRec: Record "KnkComment";
 
     local procedure GetCRLF(): Text
     var

@@ -1,11 +1,12 @@
-page 60002 "Posted Rental Lines"
+page 50051 "KnkComment List"
 {
-    PageType = ListPart;
+    PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "Posted Rental Line";
+    SourceTable = "KnkComment";
     Editable = false;
-    Caption = 'Posted Rental Lines';
+    CardPageId = 50052;
+    Caption = 'KnkComment List';
 
     layout
     {
@@ -13,42 +14,47 @@ page 60002 "Posted Rental Lines"
         {
             repeater(Group)
             {
-                field(Nr; Rec.Nr)
-                {
-                    ApplicationArea = All;
-                }
-
                 field(Headnr; Rec.Headnr)
                 {
                     ApplicationArea = All;
                 }
 
-
-                field(Car; Rec.Car)
+                field(Nr; Rec.Nr)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Manufacturer; Rec.Manufacturer)
+                field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Model; Rec.Model)
+                field(Booked; Rec.Booked)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Driven Km"; Rec."Driven Km")
-                {
-                    ApplicationArea = All;
-                }
-
-                field(Price; Rec.Price)
+                field(Date; Rec.Date)
                 {
                     ApplicationArea = All;
                 }
             }
         }
     }
+
+    // actions
+    // {
+    //     area(Processing)
+    //     {
+    //         action(ActionName)
+    //         {
+    //             ApplicationArea = All;
+
+    //             trigger OnAction()
+    //             begin
+
+    //             end;
+    //         }
+    //     }
+    // }
 }

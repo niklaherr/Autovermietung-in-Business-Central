@@ -1,12 +1,12 @@
-page 70051 "Rental Header List"
+page 70061 "KnkRental Lines"
 {
-    PageType = List;
+    PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "Rental Header";
-    Caption = 'Rental Header List';
-    CardPageId = 70052;
-    Editable = false;
+    SourceTable = "KnkRental Line";
+    Editable = true;
+    Caption = 'KnkRental Lines';
+    CardPageId = 70062;
 
     layout
     {
@@ -14,33 +14,27 @@ page 70051 "Rental Header List"
         {
             repeater(Group)
             {
-                field("Nr"; Rec.Nr)
+                field(Car; Rec.Car)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Customer; Rec.Customer)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Customername; Rec.Customername)
+                field(Model; Rec.Model)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Startdate; Rec.Startdate)
+                field("Driven Km"; Rec."Driven Km")
                 {
                     ApplicationArea = All;
                 }
 
-
-                field(Enddate; Rec.Enddate)
-                {
-                    ApplicationArea = All;
-                }
-
-                field(Comment; Rec.Comment)
+                field(Price; Rec.Price)
                 {
                     ApplicationArea = All;
                 }

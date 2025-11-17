@@ -1,4 +1,4 @@
-table 50050 "Knk Comment"
+table 50050 "KnkComment"
 {
     DataClassification = ToBeClassified;
 
@@ -8,7 +8,7 @@ table 50050 "Knk Comment"
         {
             Caption = 'Headnr';
             DataClassification = ToBeClassified;
-            TableRelation = "Rental Header";
+            TableRelation = "KnkRental Header";
         }
 
         field(2; Nr; Integer)
@@ -52,8 +52,8 @@ table 50050 "Knk Comment"
 
     trigger OnModify()
     var
-        RecRenthead: Record "Rental Header";
-        RecHeadRented: Record "Posted Rental Header";
+        RecRenthead: Record "KnkRental Header";
+        RecHeadRented: Record "KnkPosted Rental Header";
     begin
         Date := Today;
         if not Booked then begin
@@ -68,8 +68,8 @@ table 50050 "Knk Comment"
 
     trigger OnInsert()
     var
-        RecRenthead: Record "Rental Header";
-        RecHeadRented: Record "Posted Rental Header";
+        RecRenthead: Record "KnkRental Header";
+        RecHeadRented: Record "KnkPosted Rental Header";
     begin
         Date := Today;
         if not Booked then begin

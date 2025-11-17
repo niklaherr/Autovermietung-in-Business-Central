@@ -1,18 +1,15 @@
-page 70027 "Car List"
+page 70028 "KnkCar Card"
 {
-    PageType = List;
-    ApplicationArea = All;
+    PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Car;
-    Editable = false;
-    Caption = 'Car List';
-    CardPageId = 70028;
+    SourceTable = "KnkCar";
+    Caption = 'KnkCar Card';
 
     layout
     {
         area(Content)
         {
-            repeater(Group)
+            group(General)
             {
                 field("Number Plate"; Rec."Number Plate")
                 {

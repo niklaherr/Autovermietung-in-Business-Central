@@ -1,26 +1,28 @@
-page 70062 "Rental Line Card"
+page 60002 "KnkPosted Rental Lines"
 {
-    PageType = Card;
+    PageType = ListPart;
+    ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "Rental Line";
-    Caption = 'Rental Line Card';
+    SourceTable = "KnkPosted Rental Line";
+    Editable = false;
+    Caption = 'KnkPosted Rental Lines';
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(Group)
             {
                 field(Nr; Rec.Nr)
                 {
                     ApplicationArea = All;
-                    Visible = false;
                 }
 
-                field(Headnr; Rec.HeaderNo)
+                field(Headnr; Rec.Headnr)
                 {
                     ApplicationArea = All;
                 }
+
 
                 field(Car; Rec.Car)
                 {

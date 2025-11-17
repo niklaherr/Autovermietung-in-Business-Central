@@ -1,18 +1,15 @@
-page 70024 "Model List"
+page 70025 "KnkModel Card"
 {
-    PageType = List;
-    ApplicationArea = All;
+    PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Model;
-    Editable = false;
-    Caption = 'Model List';
-    CardPageId = 70025;
+    SourceTable = "KnkModel";
+    Caption = 'KnkModel Card';
 
     layout
     {
         area(Content)
         {
-            repeater(Group)
+            group(General)
             {
                 field(Model; Rec.Model)
                 {

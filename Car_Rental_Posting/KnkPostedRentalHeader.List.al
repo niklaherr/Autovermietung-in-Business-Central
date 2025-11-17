@@ -1,52 +1,52 @@
-page 70028 "Car Card"
+page 60000 "KnkPosted Rental Header List"
 {
-    PageType = Card;
+    PageType = List;
+    ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = Car;
-    Caption = 'Car Card';
+    SourceTable = "KnkPosted Rental Header";
+    Caption = 'KnkPosted Rental Header List';
+    CardPageId = 60001;
+    Editable = false;
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(Group)
             {
-                field("Number Plate"; Rec."Number Plate")
+                field("Nr"; Rec.Nr)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Manufacturer; Rec.Manufacturer)
+                field(Customer; Rec.Customer)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Model Description"; Rec."Model Description")
+                field(Customername; Rec.Customername)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Color; Rec.Color)
+                field(Startdate; Rec.Startdate)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Year Of Construction"; Rec."Year Of Construction")
+
+                field(Enddate; Rec.Enddate)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Rented; Rec.Rented)
+                field("Booking Date"; Rec."Booking Date")
                 {
                     ApplicationArea = All;
                 }
 
-                field("Price Per Day"; Rec."Price Per Day")
-                {
-                    ApplicationArea = All;
-                }
 
-                field("Price Per 100km Over 15000km"; Rec."Price Per 100km Over 15000km")
+                field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;
                 }

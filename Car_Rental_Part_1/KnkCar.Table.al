@@ -1,4 +1,4 @@
-table 50002 Car
+table 50002 "KnkCar"
 {
 
     fields
@@ -46,7 +46,7 @@ table 50002 Car
         field(2; Manufacturer; Code[20])
         {
             Caption = 'Manufacturer';
-            TableRelation = "Knk Manufacturer";
+            TableRelation = "KnkManufacturer";
 
             trigger OnValidate()
             begin
@@ -58,7 +58,7 @@ table 50002 Car
         field(3; "Model Description"; Code[20])
         {
             Caption = 'Model Description';
-            TableRelation = Model;
+            TableRelation = "KnkModel";
 
             /*trigger OnValidate()
             var
@@ -69,7 +69,7 @@ table 50002 Car
             end;*/
         }
 
-        field(4; Color; enum Color)
+        field(4; Color; enum KnkColor)
         {
             Caption = 'Color';
         }
@@ -114,7 +114,7 @@ table 50002 Car
 
     procedure CheckAutoBaujahr()
     var
-        ModelleRec: Record Model;
+        ModelleRec: Record "KnkModel";
         BaujahrVon: Date;
         BaujahrBis: Date;
         AutoBau: Date;

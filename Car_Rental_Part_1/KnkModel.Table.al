@@ -1,4 +1,4 @@
-table 50001 Model
+table 50001 "KnkModel"
 {
 
     fields
@@ -11,7 +11,7 @@ table 50001 Model
         field(2; Manufacturer; Code[20])
         {
             Caption = 'Manufacturer';
-            TableRelation = "Knk Manufacturer";
+            TableRelation = "KnkManufacturer";
         }
 
         field(3; "Manufacturing Start"; Date)
@@ -39,7 +39,7 @@ table 50001 Model
     }
 
     var
-        AutosRec: Record Car;
+        AutosRec: Record "KnkCar";
 
     trigger OnInsert()
     begin

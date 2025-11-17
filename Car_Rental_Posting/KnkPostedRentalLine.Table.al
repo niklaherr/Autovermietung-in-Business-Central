@@ -1,4 +1,4 @@
-table 50006 "Posted Rental Line"
+table 50006 "KnkPosted Rental Line"
 {
 
     fields
