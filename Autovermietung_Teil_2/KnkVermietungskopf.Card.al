@@ -2,8 +2,8 @@ page 70052 VermietungskopfCard
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Renthead;
-    Caption = 'Renthead';
+    SourceTable = RentalHeader;
+    Caption = 'RentalHeader';
 
     layout
     {

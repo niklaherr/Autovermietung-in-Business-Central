@@ -1,8 +1,8 @@
-page 70062 Rentrows
+page 70062 RentalLinesCard
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Rentrow;
+    SourceTable = RentalLines;
     Caption = 'Vermietungszeilen';
 
     layout

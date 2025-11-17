@@ -1,4 +1,4 @@
-table 50004 RentalLine
+table 50004 RentalLines
 {
 
     fields
@@ -14,7 +14,7 @@ table 50004 RentalLine
         field(2; HeaderNo; Integer)
         {
             Caption = 'Headnr';
-            TableRelation = Renthead;
+            TableRelation = RentalHeader;
             Editable = false;
         }
 
@@ -25,13 +25,13 @@ table 50004 RentalLine
             trigger OnValidate()
             var
                 Autorec: Record Car;
-                Renthead: Record Renthead;
+                RentalHeader: Record RentalHeader;
             begin
                 if Autorec.Get(Car) then begin
                     Manufactor := Autorec.Manufactor;
                     Model := Autorec."Model Description";
-                    if Renthead.Get(Headnr) then begin
-                        Price := Verrechnen(Renthead, Rec);
+                    if RentalHeader.Get(Headnr) then begin
+                        Price := Verrechnen(RentalHeader, Rec);
                     end;
                 end else begin
                     Error('Das Auto konnte nicht gefunden werden');
@@ -58,10 +58,10 @@ table 50004 RentalLine
             Caption = 'Driven Km';
             trigger OnValidate()
             var
-                Renthead: Record Renthead;
+                RentalHeader: Record RentalHeader;
             begin
-                if Renthead.Get(Headnr) then begin
-                    Price := Verrechnen(Renthead, Rec);
+                if RentalHeader.Get(Headnr) then begin
+                    Price := Verrechnen(RentalHeader, Rec);
                 end;
             end;
         }
@@ -101,7 +101,7 @@ table 50004 RentalLine
         }
     }
 
-    procedure Verrechnen(Renthead: Record Renthead; Rentline: Record Rentrow): Decimal
+    procedure Verrechnen(RentalHeader: Record RentalHeader; Rentline: Record Rentrow): Decimal
     var
         Autorec: Record car;
         Tagespreis: Decimal;
@@ -110,10 +110,10 @@ table 50004 RentalLine
         Tagespreis := 0;
         if Rentline."Driven Km" > 0 then begin
             if Autorec.Get(Car) then begin
-                if (Renthead.Startdate = 0D) or (Renthead.Enddate = 0D) then begin
+                if (RentalHeader.Startdate = 0D) or (RentalHeader.Enddate = 0D) then begin
                     Error('Bitte füllen Sie beide Datumsfelder aus.');
                 end else begin
-                    Tagespreis := (Renthead.Enddate - Renthead.Startdate) * Autorec."Price Per Day";
+                    Tagespreis := (RentalHeader.Enddate - RentalHeader.Startdate) * Autorec."Price Per Day";
                     if Rentline."Driven Km" > 15000 then begin
                         RestPreis := Autorec."Price Per 100km Over 15000km" * ((Rentline."Driven Km" - 15000) / 100);
                         Tagespreis := Tagespreis + RestPreis;
