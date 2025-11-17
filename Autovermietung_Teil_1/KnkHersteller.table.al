@@ -1,4 +1,4 @@
-table 50000 Manufactor
+table 50000 Manufacturer
 {
 
     fields

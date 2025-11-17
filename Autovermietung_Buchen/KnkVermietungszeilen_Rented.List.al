@@ -1,11 +1,11 @@
-page 60002 RentrowRented
+page 60002 "Posted Rental Lines"
 {
     PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = RentrowRented;
+    SourceTable = "Posted Rental Line";
     Editable = false;
-    Caption = 'Rentedcarslist';
+    Caption = 'Posted Rental Lines';
 
     layout
     {
@@ -29,7 +29,7 @@ page 60002 RentrowRented
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }

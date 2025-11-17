@@ -1,9 +1,9 @@
-page 60001 RentheadsRented
+page 60001 "Posted Rental Header Card"
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = RentheadRented;
-    Caption = 'Rentcard';
+    SourceTable = "Posted Rental Header";
+    Caption = 'Posted Rental Header Card';
     Editable = false;
 
     layout
@@ -50,7 +50,7 @@ page 60001 RentheadsRented
 
                     trigger OnDrillDown()
                     var
-                        CommentList: Page comments;
+                        CommentList: Page "Comment List";
                         CommentRec: Record Comment;
                     begin
                         CommentRec.SetRange(Headnr, Rec.Nr);
@@ -61,7 +61,7 @@ page 60001 RentheadsRented
                 }
             }
 
-            group(Rentrow)
+            group(RentalLines)
             {
                 part(Zeile; 60002)
                 {
@@ -90,7 +90,7 @@ page 60001 RentheadsRented
                     trigger OnAction()
                     var
                         MyCustumReport: Report Invoice;
-                        RentheadRented: Record RentheadRented;
+                        RentheadRented: Record "Posted Rental Header";
                     begin
                         // MyCustumReport.Run();
                         RentheadRented := Rec;

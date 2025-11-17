@@ -1,9 +1,9 @@
-page 70052 VermietungskopfCard
+page 70052 "Rental Header Card"
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = RentalHeader;
-    Caption = 'RentalHeader';
+    SourceTable = "Rental Header";
+    Caption = 'Rental Header Card';
 
     layout
     {
@@ -43,7 +43,7 @@ page 70052 VermietungskopfCard
 
                     trigger OnDrillDown()
                     var
-                        CommentList: Page comments;
+                        CommentList: Page "Comment List";
                         CommentRec: Record Comment;
                     begin
                         CommentRec.SetRange(Headnr, Rec.Nr);
@@ -54,7 +54,7 @@ page 70052 VermietungskopfCard
                 }
             }
 
-            group(Rentrow)
+            group(RentalLines)
             {
                 part(Zeile; 70061)
                 {
@@ -83,8 +83,8 @@ page 70052 VermietungskopfCard
                     trigger OnAction()
                     var
                         Book: Codeunit Book;
-                        Rentrow: Record Rentrow;
-                        NewNumber: Record RentheadRented;
+                        Rentrow: Record "Rental Line";
+                        NewNumber: Record "Posted Rental Header";
                     begin
                         Book.TransferHead(Rec);
                         Rentrow.SetRange(Headnr, Rec.Nr);

@@ -1,10 +1,10 @@
-page 50052 comment
+page 50052 "Comment Card"
 {
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = Comment;
-    Caption = 'Kommentarkarte';
+    Caption = 'Comment Card';
 
     layout
     {

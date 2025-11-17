@@ -1,9 +1,9 @@
-page 70022 Manufactor
+page 70022 Manufacturer
 {
     PageType = Card;
     UsageCategory = Documents;
-    SourceTable = Manufactor;
-    Caption = 'Manufactorcard';
+    SourceTable = Manufacturer;
+    Caption = 'Manufacturer Card';
 
     layout
     {

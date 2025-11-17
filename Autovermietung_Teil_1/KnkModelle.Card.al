@@ -1,9 +1,9 @@
-page 70025 Model
+page 70025 "Model Card"
 {
     PageType = Card;
     UsageCategory = Documents;
     SourceTable = Model;
-    Caption = 'Modelcard';
+    Caption = 'Model Card';
 
     layout
     {
@@ -16,17 +16,17 @@ page 70025 Model
                     ApplicationArea = All;
                 }
 
-                field(Manufactor; Rec.Manufactor)
+                field(Manufacturer; Rec.Manufacturer)
                 {
                     ApplicationArea = All;
                 }
 
-                field("Manufactoring Start"; Rec."Manufactoring Start")
+                field("Manufacturing Start"; Rec."Manufacturing Start")
                 {
                     ApplicationArea = All;
                 }
 
-                field("Manufactoring Stop"; Rec."Manufactoring Stop")
+                field("Manufacturing Stop"; Rec."Manufacturing Stop")
                 {
                     ApplicationArea = All;
                 }

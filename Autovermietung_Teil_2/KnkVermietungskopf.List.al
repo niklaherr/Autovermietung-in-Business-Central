@@ -1,10 +1,10 @@
-page 70051 Renthead
+page 70051 "Rental Header List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = Renthead;
-    Caption = 'Rentheadlist';
+    SourceTable = "Rental Header";
+    Caption = 'Rental Header List';
     CardPageId = 70052;
     Editable = false;
 

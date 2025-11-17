@@ -1,4 +1,4 @@
-table 50006 RentrowRented
+table 50006 "Posted Rental Line"
 {
 
     fields
@@ -22,9 +22,9 @@ table 50006 RentrowRented
             Editable = false;
         }
 
-        field(4; Manufactor; Code[20])
+        field(4; Manufacturer; Code[20])
         {
-            Caption = 'Manufactor';
+            Caption = 'Manufacturer';
             Editable = false;
         }
 

@@ -1,4 +1,4 @@
-table 50005 RentheadRented
+table 50005 "Posted Rental Header"
 {
 
     fields
