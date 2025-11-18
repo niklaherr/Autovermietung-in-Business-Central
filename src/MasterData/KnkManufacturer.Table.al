@@ -1,5 +1,6 @@
 table 50000 "KnkManufacturer"
 {
+    Caption = 'Manufacturer';
 
     fields
     {

@@ -1229,14 +1229,14 @@ AAAAAGSAog8AAAAAMkDRBwAAAAAZoOgDAAAAgAxQ9AEAAABABij6AAAAACADFH0AAAAAkAGKPgAAAADI
         <Field Name="Customer">
           <DataField>Customer</DataField>
         </Field>
-        <Field Name="Customername">
-          <DataField>Customername</DataField>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
         </Field>
-        <Field Name="Startdate">
-          <DataField>Startdate</DataField>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
         </Field>
-        <Field Name="Enddate">
-          <DataField>Enddate</DataField>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
         </Field>
         <Field Name="Booking_Date">
           <DataField>Booking_Date</DataField>
@@ -1301,17 +1301,17 @@ AAAAAGSAog8AAAAAMkDRBwAAAAAZoOgDAAAAgAxQ9AEAAABABij6AAAAACADFH0AAAAAkAGKPgAAAADI
         <Field Name="NumberPlate">
           <DataField>NumberPlate</DataField>
         </Field>
-        <Field Name="Gesamtpreis">
-          <DataField>Gesamtpreis</DataField>
+        <Field Name="TotalPrice">
+          <DataField>TotalPrice</DataField>
         </Field>
-        <Field Name="GesamtpreisFormat">
-          <DataField>GesamtpreisFormat</DataField>
+        <Field Name="TotalPriceFormat">
+          <DataField>TotalPriceFormat</DataField>
         </Field>
-        <Field Name="Gesamtkm">
-          <DataField>Gesamtkm</DataField>
+        <Field Name="TotalKm">
+          <DataField>TotalKm</DataField>
         </Field>
-        <Field Name="GesamtkmFormat">
-          <DataField>GesamtkmFormat</DataField>
+        <Field Name="TotalKmFormat">
+          <DataField>TotalKmFormat</DataField>
         </Field>
         <Field Name="Manufacturer">
           <DataField>Manufacturer</DataField>

@@ -1,9 +1,9 @@
 page 70022 "KnkManufacturer Card"
 {
     PageType = Card;
-    UsageCategory = Documents;
+    UsageCategory = Tasks;
     SourceTable = "KnkManufacturer";
-    Caption = 'KnkManufacturer Card';
+    Caption = 'Manufacturer Card';
 
     layout
     {

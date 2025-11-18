@@ -1,5 +1,6 @@
 table 50006 "KnkPosted Rental Line"
 {
+    Caption = 'Posted Rental Line';
 
     fields
     {

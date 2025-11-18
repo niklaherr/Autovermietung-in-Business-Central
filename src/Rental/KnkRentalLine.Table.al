@@ -1,5 +1,6 @@
 table 50004 "KnkRental Line"
 {
+    Caption = 'Rental Line';
 
     fields
     {
@@ -23,19 +24,9 @@ table 50004 "KnkRental Line"
             Caption = 'Car';
             TableRelation = "KnkCar"."Number Plate";
             trigger OnValidate()
-            var
-                CarRecord: Record "KnkCar";
-                RentalHeader: Record "KnkRental Header";
             begin
-                if CarRecord.Get(Car) then begin
-                    Manufacturer := CarRecord.Manufacturer;
-                    Model := CarRecord."Model Description";
-                    if RentalHeader.Get(HeaderNo) then begin
-                        Price := CalculatePrice(RentalHeader, Rec);
-                    end;
-                end else begin
-                    Error('The selected car could not be found.');
-                end;
+                PopulateCarDetails();
+                EnsureCarAvailability();
             end;
         }
 
@@ -57,12 +48,8 @@ table 50004 "KnkRental Line"
         {
             Caption = 'Driven Km';
             trigger OnValidate()
-            var
-                RentalHeader: Record "KnkRental Header";
             begin
-                if RentalHeader.Get(HeaderNo) then begin
-                    Price := CalculatePrice(RentalHeader, Rec);
-                end;
+                UpdatePriceFromHeader();
             end;
         }
 
@@ -77,7 +64,8 @@ table 50004 "KnkRental Line"
             Caption = 'Pickup Date & Time';
             trigger OnValidate()
             begin
-                IsCarRented();
+                ValidateRentalPeriod();
+                EnsureCarAvailability();
             end;
         }
 
@@ -86,7 +74,8 @@ table 50004 "KnkRental Line"
             Caption = 'Return Date & Time';
             trigger OnValidate()
             begin
-                IsCarRented();
+                ValidateRentalPeriod();
+                EnsureCarAvailability();
             end;
         }
     }
@@ -105,41 +94,77 @@ table 50004 "KnkRental Line"
     var
         CarRecord: Record "KnkCar";
         BasePrice: Decimal;
-        AdditionalPrice: Integer;
+        AdditionalPrice: Decimal;
+        RentalDays: Integer;
     begin
-        BasePrice := 0;
-        if RentLine."Driven Km" > 0 then begin
-            if CarRecord.Get(Car) then begin
-                if (RentalHeader.StartDate = 0D) or (RentalHeader.EndDate = 0D) then begin
-                    Error('Please fill in both date fields.');
-                end else begin
-                    BasePrice := (RentalHeader.EndDate - RentalHeader.StartDate) * CarRecord."Price Per Day";
-                    if RentLine."Driven Km" > 15000 then begin
-                        AdditionalPrice := CarRecord."Price Per 100km Over 15000km" * ((RentLine."Driven Km" - 15000) / 100);
-                        BasePrice := BasePrice + AdditionalPrice;
-                    end;
-                end;
-            end;
+        if RentLine.Car = '' then
+            exit(0);
+
+        if not CarRecord.Get(RentLine.Car) then
+            Error('The selected car could not be found.');
+
+        if (RentalHeader.StartDate = 0D) or (RentalHeader.EndDate = 0D) then
+            exit(0);
+
+        RentalDays := RentalHeader.EndDate - RentalHeader.StartDate;
+        if RentalDays < 0 then
+            Error('The end date must be after the start date.');
+
+        BasePrice := RentalDays * CarRecord."Price Per Day";
+        if RentLine."Driven Km" > 15000 then begin
+            AdditionalPrice := CarRecord."Price Per 100km Over 15000km" * ((RentLine."Driven Km" - 15000) / 100);
+            BasePrice := BasePrice + AdditionalPrice;
         end;
+
         exit(BasePrice);
     end;
 
-    procedure IsCarRented()
+    local procedure PopulateCarDetails()
+    var
+        CarRecord: Record "KnkCar";
+        RentalHeader: Record "KnkRental Header";
+    begin
+        if not CarRecord.Get(Car) then
+            Error('The selected car could not be found.');
+
+        Manufacturer := CarRecord.Manufacturer;
+        Model := CarRecord."Model Description";
+
+        if RentalHeader.Get(HeaderNo) then
+            Price := CalculatePrice(RentalHeader, Rec);
+    end;
+
+    local procedure UpdatePriceFromHeader()
+    var
+        RentalHeader: Record "KnkRental Header";
+    begin
+        if RentalHeader.Get(HeaderNo) then
+            Price := CalculatePrice(RentalHeader, Rec);
+    end;
+
+    local procedure ValidateRentalPeriod()
+    begin
+        if (Rec.PickupDateTime = 0DT) or (Rec.ReturnDateTime = 0DT) then
+            exit;
+
+        if Rec.ReturnDateTime <= Rec.PickupDateTime then
+            Error('Return date and time must be after pickup date and time.');
+    end;
+
+    local procedure EnsureCarAvailability()
     var
         RentalLine: Record "KnkRental Line";
         AlreadyRentedLbl: Label 'The selected vehicle is already rented in another rental contract!';
     begin
-        // Check if both required fields aren't empty
-        if ((Rec.PickupDateTime <> 0DT) and (Rec.ReturnDateTime <> 0DT)) then begin
+        if (Rec.Car = '') or (Rec.PickupDateTime = 0DT) or (Rec.ReturnDateTime = 0DT) then
+            exit;
 
-            // Filter second rental line table using the rental period from the created line
-            RentalLine.SetFilter(PickupDateTime, '<=%1', Rec.PickupDateTime);
-            RentalLine.SetFilter(ReturnDateTime, '>=%1', Rec.ReturnDateTime);
+        RentalLine.SetRange(Car, Rec.Car);
+        RentalLine.SetFilter("Nr", '<>%1', Rec."Nr");
+        RentalLine.SetFilter(PickupDateTime, '<%1', Rec.ReturnDateTime);
+        RentalLine.SetFilter(ReturnDateTime, '>%1', Rec.PickupDateTime);
 
-            // Check if there are still entries in the rental list after filtering
-            if RentalLine.FindFirst() then
-                // Rental lines were found after filtering, meaning the vehicle is already rented
-                Error(AlreadyRentedLbl);
-        end;
+        if RentalLine.FindFirst() then
+            Error(AlreadyRentedLbl);
     end;
 }

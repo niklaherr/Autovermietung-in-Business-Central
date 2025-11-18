@@ -3,7 +3,7 @@ page 70052 "KnkRental Header Card"
     PageType = Card;
     UsageCategory = Documents;
     SourceTable = "KnkRental Header";
-    Caption = 'KnkRental Header Card';
+    Caption = 'Rental Header Card';
 
     layout
     {
@@ -47,7 +47,7 @@ page 70052 "KnkRental Header Card"
                         CommentRec: Record "KnkComment";
                     begin
                         CommentRec.SetRange(HeaderNo, Rec.Nr);
-                        CommentRec.SetRange(Booked, false);
+                        CommentRec.SetRange(Posted, false);
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;
@@ -70,29 +70,29 @@ page 70052 "KnkRental Header Card"
     {
         area(Processing)
         {
-            group(OrderActions)
+            group(RentalActions)
             {
-                Caption = 'Order';
-                action("Book Order")
+                Caption = 'Rental';
+                action("Post Rental")
                 {
                     ApplicationArea = All;
-                    Caption = 'Book Order';
+                    Caption = 'Post Rental';
                     Promoted = true;
                     PromotedCategory = Process;
 
                     trigger OnAction()
                     var
-                        Book: Codeunit "KnkPosting Rental";
-                        Rentrow: Record "KnkRental Line";
-                        NewNumber: Record "KnkPosted Rental Header";
+                        PostingManager: Codeunit "KnkPosting Rental";
+                        RentRow: Record "KnkRental Line";
+                        PostedHeaderNo: Integer;
                     begin
-                        Book.TransferHead(Rec);
-                        Rentrow.SetRange(HeaderNo, Rec.Nr);
-                        if Rentrow.FindSet(false) then
+                        PostedHeaderNo := PostingManager.TransferHead(Rec);
+                        RentRow.SetRange(HeaderNo, Rec.Nr);
+                        if RentRow.FindSet(false) then
                             repeat
-                                Book.TransferRow(Rec, Rentrow);
-                            until Rentrow.Next() = 0;
-                        Book.ClearHead(Rec, Rec.Nr);
+                                PostingManager.TransferRow(PostedHeaderNo, RentRow);
+                            until RentRow.Next() = 0;
+                        PostingManager.ClearHead(Rec.Nr);
                     end;
                 }
             }

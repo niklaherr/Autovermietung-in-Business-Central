@@ -2,9 +2,9 @@ page 50052 "KnkComment Card"
 {
     PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = History;
     SourceTable = "KnkComment";
-    Caption = 'KnkComment Card';
+    Caption = 'Rental Comment Card';
 
     layout
     {
@@ -29,7 +29,7 @@ page 50052 "KnkComment Card"
                     ApplicationArea = All;
                 }
 
-                field(Booked; Rec.Booked)
+                field(Posted; Rec.Posted)
                 {
                     ApplicationArea = All;
                     Editable = false;

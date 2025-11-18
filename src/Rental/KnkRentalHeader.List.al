@@ -4,7 +4,7 @@ page 70051 "KnkRental Header List"
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = "KnkRental Header";
-    Caption = 'KnkRental Header List';
+    Caption = 'Rental Header List';
     CardPageId = 70052;
     Editable = false;
 

@@ -1,5 +1,6 @@
 table 50003 "KnkRental Header"
 {
+    Caption = 'Rental Header';
 
     fields
     {
@@ -77,7 +78,6 @@ table 50003 "KnkRental Header"
     }
 
     local procedure ValidateDates()
-    var
     begin
         if (Rec.StartDate <> 0D) and (Rec.EndDate <> 0D) then begin
             if Rec.EndDate < Rec.StartDate then begin
@@ -90,7 +90,7 @@ table 50003 "KnkRental Header"
     var
         RentalLine: Record "KnkRental Line";
     begin
-        RentalLine.SetRange(HeaderNo, Nr);
+        RentalLine.SetRange(HeaderNo, RentalHeaderRec.Nr);
         if RentalLine.FindSet(false) then
             repeat
                 RentalLine.Price := RentalLine.CalculatePrice(RentalHeaderRec, RentalLine);

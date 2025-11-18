@@ -2,10 +2,10 @@ page 70024 "KnkModel List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = Lists;
     SourceTable = "KnkModel";
     Editable = false;
-    Caption = 'KnkModel List';
+    Caption = 'Model List';
     CardPageId = 70025;
 
     layout

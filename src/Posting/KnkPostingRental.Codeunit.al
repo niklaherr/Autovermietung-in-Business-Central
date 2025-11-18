@@ -1,56 +1,63 @@
 codeunit 60003 "KnkPosting Rental"
 {
-    procedure TransferHead(RentalHeader: Record "KnkRental Header")
+    procedure TransferHead(RentalHeader: Record "KnkRental Header"): Integer
     var
-        TransferHead: Record "KnkPosted Rental Header";
+        PostedRentalHeader: Record "KnkPosted Rental Header";
+    begin
+        PostedRentalHeader.Init();
+        PostedRentalHeader.Customer := RentalHeader.Customer;
+        PostedRentalHeader.CustomerName := RentalHeader.CustomerName;
+        PostedRentalHeader.StartDate := RentalHeader.StartDate;
+        PostedRentalHeader.EndDate := RentalHeader.EndDate;
+        PostedRentalHeader."Booking Date" := Today;
+        PostedRentalHeader.Insert(true);
+
+        TransferComments(RentalHeader.Nr, PostedRentalHeader.Nr);
+        exit(PostedRentalHeader.Nr);
+    end;
+
+    procedure TransferRow(PostedHeaderNo: Integer; RentalLine: Record "KnkRental Line")
+    var
+        PostedRentalLine: Record "KnkPosted Rental Line";
+    begin
+        PostedRentalLine.Init();
+        PostedRentalLine.HeaderNo := PostedHeaderNo;
+        PostedRentalLine.Car := RentalLine.Car;
+        PostedRentalLine.Manufacturer := RentalLine.Manufacturer;
+        PostedRentalLine.Model := RentalLine.Model;
+        PostedRentalLine."Driven Km" := RentalLine."Driven Km";
+        PostedRentalLine.Price := RentalLine.Price;
+        PostedRentalLine.Insert(true);
+
+        RentalLine.Delete();
+    end;
+
+    procedure ClearHead(RentalHeaderNo: Integer)
+    var
+        RentalHeader: Record "KnkRental Header";
+    begin
+        if RentalHeader.Get(RentalHeaderNo) then begin
+            RentalHeader.Delete();
+            Message('Rental successfully posted.');
+        end;
+    end;
+
+    local procedure TransferComments(SourceHeaderNo: Integer; TargetHeaderNo: Integer)
+    var
         SourceCommentRec: Record "KnkComment";
         TargetCommentRec: Record "KnkComment";
     begin
-        TransferHead.Init();
-        TransferHead.Customer := RentalHeader.Customer;
-        TransferHead.CustomerName := RentalHeader.CustomerName;
-        TransferHead.StartDate := RentalHeader.StartDate;
-        TransferHead.EndDate := RentalHeader.EndDate;
-        TransferHead."Booking Date" := Today;
-        TransferHead.Insert(true);
         SourceCommentRec.Reset();
-        SourceCommentRec.SetRange(SourceCommentRec.HeaderNo, RentalHeader.Nr);
+        SourceCommentRec.SetRange(HeaderNo, SourceHeaderNo);
         if SourceCommentRec.FindSet(false) then
             repeat
                 TargetCommentRec.Init();
-                TargetCommentRec.Nr := 0;
-                TargetCommentRec.HeaderNo := TransferHead.Nr;
+                TargetCommentRec.HeaderNo := TargetHeaderNo;
                 TargetCommentRec.Comment := SourceCommentRec.Comment;
-                TargetCommentRec.Booked := true;
+                TargetCommentRec.Posted := true;
                 TargetCommentRec.Date := SourceCommentRec.Date;
                 TargetCommentRec.Insert(true);
                 SourceCommentRec.Delete();
             until SourceCommentRec.Next() = 0;
-    end;
-
-    procedure TransferRow(RentalHeader: Record "KnkRental Header"; RentalLine: Record "KnkRental Line")
-    var
-        TransferRow: Record "KnkPosted Rental Line";
-        TransferHead: Record "KnkPosted Rental Header";
-    begin
-        TransferRow.Init();
-        if TransferHead.Find('+') then begin
-            TransferRow.HeaderNo := TransferHead.Nr;
-        end;
-        TransferRow.Car := RentalLine.Car;
-        TransferRow.Manufacturer := RentalLine.Manufacturer;
-        TransferRow.Model := RentalLine.Model;
-        TransferRow."Driven Km" := RentalLine."Driven Km";
-        TransferRow.Price := RentalLine.Price;
-        TransferRow.Insert(true);
-        RentalLine.Delete;
-    end;
-
-    procedure ClearHead(RentalHeader: Record "KnkRental Header"; "Key": Integer)
-    begin
-        if RentalHeader.Get("Key") then begin
-            RentalHeader.Delete;
-            Message('Rental successfully posted.');
-        end;
     end;
 }

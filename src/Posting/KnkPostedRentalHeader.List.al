@@ -2,9 +2,9 @@ page 60000 "KnkPosted Rental Header List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = History;
     SourceTable = "KnkPosted Rental Header";
-    Caption = 'KnkPosted Rental Header List';
+    Caption = 'Posted Rental Header List';
     CardPageId = 60001;
     Editable = false;
 

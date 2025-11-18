@@ -2,10 +2,10 @@ page 70027 "KnkCar List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = Lists;
     SourceTable = "KnkCar";
     Editable = false;
-    Caption = 'KnkCar List';
+    Caption = 'Car List';
     CardPageId = 70028;
 
     layout

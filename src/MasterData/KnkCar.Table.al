@@ -1,5 +1,6 @@
 table 50002 "KnkCar"
 {
+    Caption = 'Car';
 
     fields
     {
@@ -8,40 +9,10 @@ table 50002 "KnkCar"
             Caption = 'Number Plate';
 
             trigger OnValidate()
-            var
-                i: Integer;
-                IsValid: Boolean;
             begin
-                IsValid := true;
-
-                // Validate the first two characters are capital letters
-                for i := 1 to 2 do
-                    if not IsLetter("Number Plate"[i]) then
-                        IsValid := false;
-
-                // Validate the third character is a dash
-                if "Number Plate"[3] <> '-' then
-                    IsValid := false;
-
-                // Validate the next two characters are capital letters
-                for i := 4 to 5 do
-                    if not IsLetter("Number Plate"[i]) then
-                        IsValid := false;
-
-                // Validate the sixth character is a dash
-                if "Number Plate"[6] <> '-' then
-                    IsValid := false;
-
-                // Validate the last four characters are digits
-                for i := 7 to 10 do
-                    if not IsDigit("Number Plate"[i]) then
-                        IsValid := false;
-
-                if not IsValid then
-                    Error('The license plate must match the "JB-HS-9187" format.');
+                ValidateGermanNumberPlate();
             end;
         }
-
 
         field(2; Manufacturer; Code[20])
         {
@@ -142,9 +113,52 @@ table 50002 "KnkCar"
         end;
     end;
 
-    local procedure DeleteCar()
+    local procedure ValidateGermanNumberPlate()
+    var
+        Plate: Text[10];
+        DashPositions: array[2] of Integer;
+        DashCount: Integer;
+        SectionLength: Integer;
+        i: Integer;
     begin
+        Plate := UpperCase("Number Plate");
+        "Number Plate" := Plate;
 
+        for i := 1 to StrLen(Plate) do begin
+            if Plate[i] = '-' then begin
+                DashCount += 1;
+                if DashCount <= 2 then
+                    DashPositions[DashCount] := i;
+            end else
+                if not (IsLetter(Plate[i]) or IsDigit(Plate[i])) then
+                    Error('A German number plate may only contain letters, digits, and dashes.');
+        end;
+
+        if DashCount <> 2 then
+            Error('A German number plate must contain exactly two dashes (e.g. "HB-AB-1234").');
+
+        SectionLength := DashPositions[1] - 1;
+        if (SectionLength < 1) or (SectionLength > 3) then
+            Error('The city prefix must consist of 1 to 3 letters.');
+        for i := 1 to SectionLength do
+            if not IsLetter(Plate[i]) then
+                Error('The city prefix may only contain letters.');
+
+        SectionLength := DashPositions[2] - DashPositions[1] - 1;
+        if (SectionLength < 1) or (SectionLength > 2) then
+            Error('The letter block after the first dash must consist of 1 or 2 letters.');
+        for i := DashPositions[1] + 1 to DashPositions[2] - 1 do
+            if not IsLetter(Plate[i]) then
+                Error('The letter block after the first dash may only contain letters.');
+
+        SectionLength := StrLen(Plate) - DashPositions[2];
+        if (SectionLength < 1) or (SectionLength > 4) then
+            Error('The number block must consist of 1 to 4 digits.');
+        if Plate[DashPositions[2] + 1] = '0' then
+            Error('The number block may not start with zero.');
+        for i := DashPositions[2] + 1 to StrLen(Plate) do
+            if not IsDigit(Plate[i]) then
+                Error('The number block may only contain digits.');
     end;
 
     procedure IsLetter(Char: Char): Boolean;

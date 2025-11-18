@@ -1,9 +1,9 @@
 page 60001 "KnkPosted Rental Header Card"
 {
     PageType = Card;
-    UsageCategory = Documents;
+    UsageCategory = History;
     SourceTable = "KnkPosted Rental Header";
-    Caption = 'KnkPosted Rental Header Card';
+    Caption = 'Posted Rental Header Card';
     Editable = false;
 
     layout
@@ -54,7 +54,7 @@ page 60001 "KnkPosted Rental Header Card"
                         CommentRec: Record "KnkComment";
                     begin
                         CommentRec.SetRange(HeaderNo, Rec.Nr);
-                        CommentRec.SetRange(Booked, true);
+                        CommentRec.SetRange(Posted, true);
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;

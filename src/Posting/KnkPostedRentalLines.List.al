@@ -2,10 +2,10 @@ page 60002 "KnkPosted Rental Lines"
 {
     PageType = ListPart;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = History;
     SourceTable = "KnkPosted Rental Line";
     Editable = false;
-    Caption = 'KnkPosted Rental Lines';
+    Caption = 'Posted Rental Lines';
 
     layout
     {

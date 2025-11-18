@@ -1,5 +1,6 @@
 table 50005 "KnkPosted Rental Header"
 {
+    Caption = 'Posted Rental Header';
 
     fields
     {

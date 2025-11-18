@@ -1,9 +1,9 @@
 page 70028 "KnkCar Card"
 {
     PageType = Card;
-    UsageCategory = Documents;
+    UsageCategory = Tasks;
     SourceTable = "KnkCar";
-    Caption = 'KnkCar Card';
+    Caption = 'Car Card';
 
     layout
     {

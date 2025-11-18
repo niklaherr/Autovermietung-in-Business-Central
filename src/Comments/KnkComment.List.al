@@ -2,11 +2,11 @@ page 50051 "KnkComment List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = History;
     SourceTable = "KnkComment";
     Editable = false;
     CardPageId = 50052;
-    Caption = 'KnkComment List';
+    Caption = 'Rental Comment List';
 
     layout
     {
@@ -29,7 +29,7 @@ page 50051 "KnkComment List"
                     ApplicationArea = All;
                 }
 
-                field(Booked; Rec.Booked)
+                field(Posted; Rec.Posted)
                 {
                     ApplicationArea = All;
                 }

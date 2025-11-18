@@ -2,10 +2,10 @@ page 70021 "KnkManufacturer List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = Lists;
     SourceTable = "KnkManufacturer";
     Editable = false;
-    Caption = 'KnkManufacturer List';
+    Caption = 'Manufacturer List';
     CardPageId = 70022;
 
     layout

@@ -1,9 +1,9 @@
 page 70062 "KnkRental Line Card"
 {
     PageType = Card;
-    UsageCategory = Documents;
+    UsageCategory = Tasks;
     SourceTable = "KnkRental Line";
-    Caption = 'KnkRental Line Card';
+    Caption = 'Rental Line Card';
 
     layout
     {

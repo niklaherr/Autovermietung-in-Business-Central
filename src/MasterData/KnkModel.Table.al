@@ -1,5 +1,6 @@
 table 50001 "KnkModel"
 {
+    Caption = 'Model';
 
     fields
     {
@@ -43,16 +44,16 @@ table 50001 "KnkModel"
 
     trigger OnInsert()
     begin
-        CheckDates();
+        ValidateManufacturingDates();
     end;
 
     trigger OnModify()
     begin
-        CheckDates();
+        ValidateManufacturingDates();
     end;
 
 
-    local procedure CheckDates()
+    local procedure ValidateManufacturingDates()
     var
         ManufacturingStartDate: Date;
         ManufacturingStopDate: Date;

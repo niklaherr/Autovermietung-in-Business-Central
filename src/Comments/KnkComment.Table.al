@@ -1,5 +1,6 @@
 table 50050 "KnkComment"
 {
+    Caption = 'Rental Comment';
     DataClassification = ToBeClassified;
 
     fields
@@ -24,9 +25,9 @@ table 50050 "KnkComment"
             DataClassification = ToBeClassified;
         }
 
-        field(4; Booked; Boolean)
+        field(4; Posted; Boolean)
         {
-            Caption = 'Booked';
+            Caption = 'Posted';
             DataClassification = ToBeClassified;
         }
 
@@ -47,37 +48,32 @@ table 50050 "KnkComment"
 
     fieldgroups
     {
-        fieldgroup(DropDown; HeaderNo, Booked, Date) { }
+        fieldgroup(DropDown; HeaderNo, Posted, Date) { }
     }
 
     trigger OnModify()
-    var
-        RentalHeaderRec: Record "KnkRental Header";
-        PostedRentalHeaderRec: Record "KnkPosted Rental Header";
     begin
-        Date := Today;
-        if not Booked then begin
-            RentalHeaderRec.Get(HeaderNo);
-            RentalHeaderRec.CalcFields(Comment)
-        end else begin
-            PostedRentalHeaderRec.Get(HeaderNo);
-            PostedRentalHeaderRec.CalcFields(Comment)
-        end;
+        UpdateParentCommentCount();
     end;
 
 
     trigger OnInsert()
+    begin
+        UpdateParentCommentCount();
+    end;
+
+    local procedure UpdateParentCommentCount()
     var
         RentalHeaderRec: Record "KnkRental Header";
         PostedRentalHeaderRec: Record "KnkPosted Rental Header";
     begin
         Date := Today;
-        if not Booked then begin
-            RentalHeaderRec.Get(HeaderNo);
-            RentalHeaderRec.CalcFields(Comment)
+        if not Posted then begin
+            if RentalHeaderRec.Get(HeaderNo) then
+                RentalHeaderRec.CalcFields(Comment);
         end else begin
-            PostedRentalHeaderRec.Get(HeaderNo);
-            PostedRentalHeaderRec.CalcFields(Comment)
+            if PostedRentalHeaderRec.Get(HeaderNo) then
+                PostedRentalHeaderRec.CalcFields(Comment);
         end;
     end;
 }

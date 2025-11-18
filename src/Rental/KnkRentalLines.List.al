@@ -2,10 +2,10 @@ page 70061 "KnkRental Lines"
 {
     PageType = ListPart;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = Lists;
     SourceTable = "KnkRental Line";
     Editable = true;
-    Caption = 'KnkRental Lines';
+    Caption = 'Rental Lines';
     CardPageId = 70062;
 
     layout
