@@ -1,473 +1,395 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="de-DE" original="Autovermietung">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Autovermietung">
     <body>
       <group id="body">
         <trans-unit id="Table 2325673474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car</source>
-          <target state="translated">Auto</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 2827249175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Color</source>
-          <target state="translated">Farbe</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Color - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 3647128553 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
-          <target state="translated">Hersteller</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 3487205323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model Description</source>
-          <target state="translated">Modellbezeichnung</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Model Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 2609280369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Number Plate</source>
-          <target state="translated">Kennzeichen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Number Plate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 2688180411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price Per 100km Over 15000km</source>
-          <target state="translated">Preis pro 100 km über 15.000 km</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Price Per 100km Over 15000km - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 2417912690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price Per Day</source>
-          <target state="translated">Preis pro Tag</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Price Per Day - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 1482469392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rented</source>
-          <target state="translated">Vermietet</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Rented - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2325673474 - Field 3745586077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Year Of Construction</source>
-          <target state="translated">Baujahr</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkCar - Field Year Of Construction - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Comment</source>
-          <target state="translated">Vermietungskommentar</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
-          <target state="translated">Kommentar</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date</source>
-          <target state="translated">Datum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Field Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Field 2289956346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Header No.</source>
-          <target state="translated">Kopf-Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Field HeaderNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
-          <target state="translated">Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1822774319 - Field 35450067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted</source>
-          <target state="translated">Gebucht</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkComment - Field Posted - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4217849659 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
-          <target state="translated">Hersteller</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkManufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4217849659 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target state="translated">Beschreibung</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkManufacturer - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4217849659 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="translated">Name</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkManufacturer - Field Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3898050555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
-          <target state="translated">Modell</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkModel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3898050555 - Field 3647128553 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
-          <target state="translated">Hersteller</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkModel - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3898050555 - Field 3297847188 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturing Start</source>
-          <target state="translated">Produktionsbeginn</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkModel - Field Manufacturing Start - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3898050555 - Field 3172229284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturing Stop</source>
-          <target state="translated">Produktionsende</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkModel - Field Manufacturing Stop - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3898050555 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
-          <target state="translated">Modell</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkModel - Field Model - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header</source>
-          <target state="translated">Gebuchter Vermietungskopf</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 22746087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Booking Date</source>
-          <target state="translated">Buchungsdatum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field Booking Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
-          <target state="translated">Kommentar</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer</source>
-          <target state="translated">Kunde</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field Customer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 1881986821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Name</source>
-          <target state="translated">Kundenname</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field CustomerName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
-          <target state="translated">Enddatum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field EndDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
-          <target state="translated">Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2237920716 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
-          <target state="translated">Startdatum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Line</source>
-          <target state="translated">Gebuchte Vermietungszeile</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 4179158116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car</source>
-          <target state="translated">Auto</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Car - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 2218538240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Driven Km</source>
-          <target state="translated">Gefahrene km</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Driven Km - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 2289956346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Header No.</source>
-          <target state="translated">Kopf-Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field HeaderNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 3647128553 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
-          <target state="translated">Hersteller</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
-          <target state="translated">Modell</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Model - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
-          <target state="translated">Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
-          <target state="translated">Preis</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Price - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header</source>
-          <target state="translated">Vermietungskopf</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comment</source>
-          <target state="translated">Kommentar</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer</source>
-          <target state="translated">Kunde</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field Customer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 1881986821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Name</source>
-          <target state="translated">Kundenname</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field CustomerName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
-          <target state="translated">Enddatum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field EndDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
-          <target state="translated">Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
-          <target state="translated">Startdatum</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Line</source>
-          <target state="translated">Vermietungszeile</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Method 1905667477 - NamedType 2414032556" size-unit="char" translate="yes" xml:space="preserve">
           <source>The selected vehicle is already rented in another rental contract!</source>
-          <target state="translated">Das ausgewählte Fahrzeug ist bereits in einem anderen Mietvertrag vermietet!</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Method EnsureCarAvailability - NamedType AlreadyRentedLbl</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 4179158116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car</source>
-          <target state="translated">Auto</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Car - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 2218538240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Driven Km</source>
-          <target state="translated">Gefahrene km</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Driven Km - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 2289956346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Header No.</source>
-          <target state="translated">Kopf-Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field HeaderNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 3647128553 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer</source>
-          <target state="translated">Hersteller</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Manufacturer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 1695122201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model</source>
-          <target state="translated">Modell</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Model - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
-          <target state="translated">Nr.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Nr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 3860221327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Pickup Date &amp; Time</source>
-          <target state="translated">Abholdatum und -zeit</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field PickupDateTime - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
-          <target state="translated">Preis</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Price - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Field 1014842125 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Return Date &amp; Time</source>
-          <target state="translated">Rückgabedatum und -zeit</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field ReturnDateTime - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1770990406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Card</source>
-          <target state="translated">Fahrzeugkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkCar Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1452836512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car List</source>
-          <target state="translated">Fahrzeugliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkCar List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3853995659 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Comment Card</source>
-          <target state="translated">Vermietungskommentarkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkComment Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2583355449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Comment List</source>
-          <target state="translated">Vermietungskommentarliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkComment List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 411219983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer Card</source>
-          <target state="translated">Herstellerkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkManufacturer Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2635491493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer List</source>
-          <target state="translated">Herstellerliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkManufacturer List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 556603343 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model Card</source>
-          <target state="translated">Modellkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkModel Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1338560357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Model List</source>
-          <target state="translated">Modellliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkModel List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1261797752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header Card</source>
-          <target state="translated">Gebuchter Vermietungskopfkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1261797752 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Report</source>
-          <target state="translated">Bericht</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Action Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1261797752 - Action 3110191937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Order</source>
-          <target state="translated">Beleg drucken</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Action Print Order - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4106894814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header List</source>
-          <target state="translated">Gebuchte Vermietungsköpfe</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2282962782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Lines</source>
-          <target state="translated">Gebuchte Vermietungszeilen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Lines - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2302942919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header Card</source>
-          <target state="translated">Vermietungskopfkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2302942919 - Action 984121071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental</source>
-          <target state="translated">Vermietung</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Action RentalActions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2302942919 - Action 3250376804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Post Rental</source>
-          <target state="translated">Vermietung verbuchen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Action Post Rental - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3739062013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header List</source>
-          <target state="translated">Vermietungskopfliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1423613368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Line Card</source>
-          <target state="translated">Vermietungszeilenkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Line Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2775275181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Lines</source>
-          <target state="translated">Vermietungszeilen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Lines - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 821689635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice</source>
-          <target state="translated">Rechnung</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Invoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 821689635 - NamedType 1834312821" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bameninghong</source>
-          <target state="translated">Bameninghong</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Invoice - NamedType Demo</note>
         </trans-unit>
