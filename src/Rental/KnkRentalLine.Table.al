@@ -26,7 +26,6 @@ table 50004 "KnkRental Line"
             trigger OnValidate()
             begin
                 PopulateCarDetails();
-                EnsureCarAvailability();
             end;
         }
 
@@ -59,25 +58,6 @@ table 50004 "KnkRental Line"
             Editable = false;
         }
 
-        field(8; PickupDateTime; DateTime)
-        {
-            Caption = 'Pickup Date & Time';
-            trigger OnValidate()
-            begin
-                ValidateRentalPeriod();
-                EnsureCarAvailability();
-            end;
-        }
-
-        field(9; ReturnDateTime; DateTime)
-        {
-            Caption = 'Return Date & Time';
-            trigger OnValidate()
-            begin
-                ValidateRentalPeriod();
-                EnsureCarAvailability();
-            end;
-        }
     }
 
 
@@ -142,29 +122,4 @@ table 50004 "KnkRental Line"
             Price := CalculatePrice(RentalHeader, Rec);
     end;
 
-    local procedure ValidateRentalPeriod()
-    begin
-        if (Rec.PickupDateTime = 0DT) or (Rec.ReturnDateTime = 0DT) then
-            exit;
-
-        if Rec.ReturnDateTime <= Rec.PickupDateTime then
-            Error('Return date and time must be after pickup date and time.');
-    end;
-
-    local procedure EnsureCarAvailability()
-    var
-        RentalLine: Record "KnkRental Line";
-        AlreadyRentedLbl: Label 'The selected vehicle is already rented in another rental contract!';
-    begin
-        if (Rec.Car = '') or (Rec.PickupDateTime = 0DT) or (Rec.ReturnDateTime = 0DT) then
-            exit;
-
-        RentalLine.SetRange(Car, Rec.Car);
-        RentalLine.SetFilter("Nr", '<>%1', Rec."Nr");
-        RentalLine.SetFilter(PickupDateTime, '<%1', Rec.ReturnDateTime);
-        RentalLine.SetFilter(ReturnDateTime, '>%1', Rec.PickupDateTime);
-
-        if RentalLine.FindFirst() then
-            Error(AlreadyRentedLbl);
-    end;
 }
