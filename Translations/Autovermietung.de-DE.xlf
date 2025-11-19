@@ -143,7 +143,7 @@
         </trans-unit>
         <trans-unit id="Table 2237920716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header</source>
-          <target state="translated">Gebuchter Vermietungskopf</target>
+          <target state="translated">Gebuchter Mietauftrag</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Property Caption</note>
         </trans-unit>
@@ -191,7 +191,7 @@
         </trans-unit>
         <trans-unit id="Table 1217716979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Line</source>
-          <target state="translated">Gebuchte Vermietungszeile</target>
+          <target state="translated">Gebuchte Mietauftragszeile</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Property Caption</note>
         </trans-unit>
@@ -239,7 +239,7 @@
         </trans-unit>
         <trans-unit id="Table 2144210643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header</source>
-          <target state="translated">Vermietungskopf</target>
+          <target state="translated">Mietauftrag</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Property Caption</note>
         </trans-unit>
@@ -281,7 +281,7 @@
         </trans-unit>
         <trans-unit id="Table 1620147980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Line</source>
-          <target state="translated">Vermietungszeile</target>
+          <target state="translated">Mietauftragszeile</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Property Caption</note>
         </trans-unit>
@@ -395,7 +395,7 @@
         </trans-unit>
         <trans-unit id="Page 1261797752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header Card</source>
-          <target state="translated">Gebuchter Vermietungskopfkarte</target>
+          <target state="translated">Gebuchte Mietauftragskarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Property Caption</note>
         </trans-unit>
@@ -413,19 +413,19 @@
         </trans-unit>
         <trans-unit id="Page 4106894814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Header List</source>
-          <target state="translated">Gebuchte Vermietungsköpfe</target>
+          <target state="translated">Gebuchte Mietaufträge</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2282962782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Lines</source>
-          <target state="translated">Gebuchte Vermietungszeilen</target>
+          <target state="translated">Gebuchte Mietauftragszeilen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Lines - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2302942919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header Card</source>
-          <target state="translated">Vermietungskopfkarte</target>
+          <target state="translated">Mietauftragskarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Property Caption</note>
         </trans-unit>
@@ -443,19 +443,19 @@
         </trans-unit>
         <trans-unit id="Page 3739062013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header List</source>
-          <target state="translated">Vermietungskopfliste</target>
+          <target state="translated">Mietauftragsliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1423613368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Line Card</source>
-          <target state="translated">Vermietungszeilenkarte</target>
+          <target state="translated">Mietauftragszeilenkarte</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Line Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2775275181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Lines</source>
-          <target state="translated">Vermietungszeilen</target>
+          <target state="translated">Mietauftragszeilen</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Lines - Property Caption</note>
         </trans-unit>

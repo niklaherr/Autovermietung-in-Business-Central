@@ -238,11 +238,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1620147980 - Method 1905667477 - NamedType 2414032556" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The selected vehicle is already rented in another rental contract!</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Method EnsureCarAvailability - NamedType AlreadyRentedLbl</note>
-        </trans-unit>
         <trans-unit id="Table 1620147980 - Field 4179158116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -273,20 +268,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Nr - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1620147980 - Field 3860221327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Pickup Date &amp; Time</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field PickupDateTime - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 1620147980 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1620147980 - Field 1014842125 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Return Date &amp; Time</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field ReturnDateTime - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1770990406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Card</source>

@@ -44,20 +44,15 @@ codeunit 60003 "KnkPosting Rental"
 
     local procedure TransferComments(SourceHeaderNo: Integer; TargetHeaderNo: Integer)
     var
-        SourceCommentRec: Record "KnkComment";
-        TargetCommentRec: Record "KnkComment";
+        CommentRec: Record "KnkComment";
     begin
-        SourceCommentRec.Reset();
-        SourceCommentRec.SetRange(HeaderNo, SourceHeaderNo);
-        if SourceCommentRec.FindSet(false) then
-            repeat
-                TargetCommentRec.Init();
-                TargetCommentRec.HeaderNo := TargetHeaderNo;
-                TargetCommentRec.Comment := SourceCommentRec.Comment;
-                TargetCommentRec.Posted := true;
-                TargetCommentRec.Date := SourceCommentRec.Date;
-                TargetCommentRec.Insert(true);
-                SourceCommentRec.Delete();
-            until SourceCommentRec.Next() = 0;
+        CommentRec.SetRange(HeaderNo, SourceHeaderNo);
+        CommentRec.SetRange(Posted, false);
+        while CommentRec.FindFirst() do begin
+            CommentRec.Posted := true;
+            CommentRec.Modify();
+            if CommentRec.HeaderNo <> TargetHeaderNo then
+                CommentRec.Rename(CommentRec.Nr, TargetHeaderNo);
+        end;
     end;
 }

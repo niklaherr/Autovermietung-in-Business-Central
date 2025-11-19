@@ -9,7 +9,8 @@ table 50050 "KnkComment"
         {
             Caption = 'Header No.';
             DataClassification = ToBeClassified;
-            TableRelation = "KnkRental Header";
+            TableRelation = if (Posted = const(false)) "KnkRental Header"
+                             else "KnkPosted Rental Header";
         }
 
         field(2; Nr; Integer)
@@ -67,7 +68,8 @@ table 50050 "KnkComment"
         RentalHeaderRec: Record "KnkRental Header";
         PostedRentalHeaderRec: Record "KnkPosted Rental Header";
     begin
-        Date := Today;
+        if Date = 0D then
+            Date := Today;
         if not Posted then begin
             if RentalHeaderRec.Get(HeaderNo) then
                 RentalHeaderRec.CalcFields(Comment);
