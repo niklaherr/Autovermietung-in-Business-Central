@@ -25,14 +25,6 @@ report 60050 Invoice
             {
             }
 
-            column(StartDate; StartDate)
-            {
-            }
-
-            column(EndDate; EndDate)
-            {
-            }
-
             column(Booking_Date; "Booking Date")
             {
             }
@@ -188,9 +180,7 @@ report 60050 Invoice
 
                 CustomerInfo := Customer + GetCRLF() +
                                 Format("Booking Date") + GetCRLF() +
-                                Format(Nr) + GetCRLF() + GetCRLF() +
-                                Format(StartDate) + GetCRLF() +
-                                Format(EndDate);
+                                Format(Nr) + GetCRLF() + GetCRLF()
             end;
 
             trigger OnPreDataItem()

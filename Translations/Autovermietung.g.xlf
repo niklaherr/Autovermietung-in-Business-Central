@@ -143,20 +143,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field CustomerName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2237920716 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>End Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field EndDate - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 2237920716 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field Nr - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 2237920716 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Start Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Header - Field StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1217716979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Rental Line</source>
@@ -193,10 +183,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Nr - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1217716979 - Field 2101915063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pickup Date/Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Pickup DateTime - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1217716979 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1217716979 - Field 672689829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return Date/Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table KnkPosted Rental Line - Field Return DateTime - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2144210643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Header</source>
@@ -218,20 +218,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field CustomerName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2144210643 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>End Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field EndDate - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 2144210643 - Field 4137698392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nr</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field Nr - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 2144210643 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Start Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Header - Field StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1620147980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental Line</source>
@@ -268,10 +258,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Nr - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1620147980 - Field 2101915063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pickup Date/Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Pickup DateTime - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1620147980 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1620147980 - Field 672689829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return Date/Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table KnkRental Line - Field Return DateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1793401498 - Method 3820917628 - NamedType 3433905889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The vehicle %1 is already reserved from %2 to %3.\\ \Please choose a different time period or vehicle.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit KnkReservation Conflict Check - Method CheckForConflicts - NamedType ConflictMsg</note>
         </trans-unit>
         <trans-unit id="Page 1770990406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Car Card</source>
@@ -318,6 +323,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1261797752 - Control 186740330 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Timeframe Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page KnkPosted Rental Header Card - Control TimeframeInfo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1261797752 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -343,6 +353,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2302942919 - Control 44562860 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Timeframe Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Header Card - Control TimeframeNote - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2302942919 - Action 984121071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Rental</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -367,6 +382,16 @@
           <source>Rental Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2775275181 - Action 1552664585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Car Availability</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Lines - Action CheckAvailability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2775275181 - Action 3081750198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set Current Date/Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page KnkRental Lines - Action SetCurrentDateTime - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 821689635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice</source>

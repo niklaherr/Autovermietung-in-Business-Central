@@ -23,18 +23,6 @@ table 50005 "KnkPosted Rental Header"
             Editable = false;
         }
 
-        field(5; StartDate; Date)
-        {
-            Caption = 'Start Date';
-            Editable = false;
-        }
-
-        field(6; EndDate; Date)
-        {
-            Caption = 'End Date';
-            Editable = false;
-        }
-
         field(7; "Booking Date"; Date)
         {
             Caption = 'Booking Date';
@@ -60,7 +48,7 @@ table 50005 "KnkPosted Rental Header"
 
     fieldgroups
     {
-        fieldgroup(DropDown; CustomerName, StartDate, EndDate, "Booking Date") { }
+        fieldgroup(DropDown; CustomerName, "Booking Date") { }
     }
 
 }

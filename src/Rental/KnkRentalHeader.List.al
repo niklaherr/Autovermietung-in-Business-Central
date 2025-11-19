@@ -29,17 +29,6 @@ page 70051 "KnkRental Header List"
                     ApplicationArea = All;
                 }
 
-                field(StartDate; Rec.StartDate)
-                {
-                    ApplicationArea = All;
-                }
-
-
-                field(EndDate; Rec.EndDate)
-                {
-                    ApplicationArea = All;
-                }
-
                 field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;

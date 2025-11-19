@@ -1232,12 +1232,6 @@ AAAAAGSAog8AAAAAMkDRBwAAAAAZoOgDAAAAgAxQ9AEAAABABij6AAAAACADFH0AAAAAkAGKPgAAAADI
         <Field Name="CustomerName">
           <DataField>CustomerName</DataField>
         </Field>
-        <Field Name="StartDate">
-          <DataField>StartDate</DataField>
-        </Field>
-        <Field Name="EndDate">
-          <DataField>EndDate</DataField>
-        </Field>
         <Field Name="Booking_Date">
           <DataField>Booking_Date</DataField>
         </Field>

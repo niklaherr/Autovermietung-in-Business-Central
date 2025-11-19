@@ -7,8 +7,6 @@ codeunit 60003 "KnkPosting Rental"
         PostedRentalHeader.Init();
         PostedRentalHeader.Customer := RentalHeader.Customer;
         PostedRentalHeader.CustomerName := RentalHeader.CustomerName;
-        PostedRentalHeader.StartDate := RentalHeader.StartDate;
-        PostedRentalHeader.EndDate := RentalHeader.EndDate;
         PostedRentalHeader."Booking Date" := Today;
         PostedRentalHeader.Insert(true);
 
@@ -27,6 +25,8 @@ codeunit 60003 "KnkPosting Rental"
         PostedRentalLine.Model := RentalLine.Model;
         PostedRentalLine."Driven Km" := RentalLine."Driven Km";
         PostedRentalLine.Price := RentalLine.Price;
+        PostedRentalLine."Pickup DateTime" := RentalLine."Pickup DateTime";
+        PostedRentalLine."Return DateTime" := RentalLine."Return DateTime";
         PostedRentalLine.Insert(true);
 
         RentalLine.Delete();

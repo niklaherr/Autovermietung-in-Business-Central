@@ -29,17 +29,6 @@ page 60000 "KnkPosted Rental Header List"
                     ApplicationArea = All;
                 }
 
-                field(StartDate; Rec.StartDate)
-                {
-                    ApplicationArea = All;
-                }
-
-
-                field(EndDate; Rec.EndDate)
-                {
-                    ApplicationArea = All;
-                }
-
                 field("Booking Date"; Rec."Booking Date")
                 {
                     ApplicationArea = All;
