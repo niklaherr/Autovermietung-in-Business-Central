@@ -39,11 +39,6 @@ page 70027 "KnkCar List"
                     ApplicationArea = All;
                 }
 
-                field(Rented; Rec.Rented)
-                {
-                    ApplicationArea = All;
-                }
-
                 field("Price Per Day"; Rec."Price Per Day")
                 {
                     ApplicationArea = All;

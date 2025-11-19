@@ -46,17 +46,12 @@ table 50002 "KnkCar"
             end;
         }
 
-        field(6; Rented; Boolean)
-        {
-            Caption = 'Rented';
-        }
-
-        field(7; "Price Per Day"; Decimal)
+        field(6; "Price Per Day"; Decimal)
         {
             Caption = 'Price Per Day';
         }
 
-        field(8; "Price Per 100km Over 15000km"; Decimal)
+        field(7; "Price Per 100km Over 15000km"; Decimal)
         {
             Caption = 'Price Per 100km Over 15000km';
         }
