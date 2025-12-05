@@ -1,4 +1,4 @@
-table 50003 "KnkRental Header"
+﻿table 50003 "KnkRental Header"
 {
     Caption = 'Rental Header';
 
@@ -35,32 +35,12 @@ table 50003 "KnkRental Header"
             TableRelation = Customer.Name;
         }
 
-        field(5; StartDate; Date)
-        {
-            Caption = 'Start Date';
-            trigger OnValidate()
-            begin
-                ValidateDates();
-                RecalculateLines(Rec);
-            end;
-        }
-
-        field(6; EndDate; Date)
-        {
-            Caption = 'End Date';
-            trigger OnValidate()
-            begin
-                ValidateDates();
-                RecalculateLines(Rec);
-            end;
-        }
-
         field(7; Comment; Integer)
         {
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = count("KnkComment" where(HeaderNo = field(Nr)));
+            CalcFormula = count("KnkComment" where(HeaderNo = field(Nr), Posted = const(false)));
         }
     }
 
@@ -74,27 +54,6 @@ table 50003 "KnkRental Header"
 
     fieldgroups
     {
-        fieldgroup(DropDown; Nr, CustomerName, StartDate, EndDate) { }
+        fieldgroup(DropDown; Nr, CustomerName) { }
     }
-
-    local procedure ValidateDates()
-    begin
-        if (Rec.StartDate <> 0D) and (Rec.EndDate <> 0D) then begin
-            if Rec.EndDate < Rec.StartDate then begin
-                Error('The end date cannot be before the start date.');
-            end;
-        end;
-    end;
-
-    local procedure RecalculateLines(RentalHeaderRec: Record "KnkRental Header")
-    var
-        RentalLine: Record "KnkRental Line";
-    begin
-        RentalLine.SetRange(HeaderNo, RentalHeaderRec.Nr);
-        if RentalLine.FindSet(false) then
-            repeat
-                RentalLine.Price := RentalLine.CalculatePrice(RentalHeaderRec, RentalLine);
-                RentalLine.Modify(false);
-            until RentalLine.Next() = 0;
-    end;
 }

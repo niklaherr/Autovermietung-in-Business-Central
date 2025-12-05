@@ -23,18 +23,6 @@ table 50005 "KnkPosted Rental Header"
             Editable = false;
         }
 
-        field(5; StartDate; Date)
-        {
-            Caption = 'Start Date';
-            Editable = false;
-        }
-
-        field(6; EndDate; Date)
-        {
-            Caption = 'End Date';
-            Editable = false;
-        }
-
         field(7; "Booking Date"; Date)
         {
             Caption = 'Booking Date';
@@ -46,7 +34,7 @@ table 50005 "KnkPosted Rental Header"
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = count("KnkComment" where(HeaderNo = field(Nr)));
+            CalcFormula = count("KnkComment" where(HeaderNo = field(Nr), Posted = const(true)));
         }
     }
 
@@ -60,7 +48,7 @@ table 50005 "KnkPosted Rental Header"
 
     fieldgroups
     {
-        fieldgroup(DropDown; CustomerName, StartDate, EndDate, "Booking Date") { }
+        fieldgroup(DropDown; CustomerName, "Booking Date") { }
     }
 
 }

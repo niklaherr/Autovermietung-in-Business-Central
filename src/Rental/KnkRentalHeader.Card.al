@@ -1,4 +1,4 @@
-page 70052 "KnkRental Header Card"
+﻿page 70052 "KnkRental Header Card"
 {
     PageType = Card;
     UsageCategory = Documents;
@@ -26,17 +26,6 @@ page 70052 "KnkRental Header Card"
                     ApplicationArea = All;
                 }
 
-                field(StartDate; Rec.StartDate)
-                {
-                    ApplicationArea = All;
-                }
-
-
-                field(EndDate; Rec.EndDate)
-                {
-                    ApplicationArea = All;
-                }
-
                 field(Comment; Rec.Comment)
                 {
                     ApplicationArea = All;
@@ -51,6 +40,20 @@ page 70052 "KnkRental Header Card"
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;
+                }
+
+                group(TimeframeNote)
+                {
+                    Caption = 'Timeframe Information';
+
+                    field(InfoText; 'Pickup and return times are now managed individually for each rental line.')
+                    {
+                        ApplicationArea = All;
+                        Editable = false;
+                        ShowCaption = false;
+                        Style = AttentionAccent;
+                        MultiLine = true;
+                    }
                 }
             }
 

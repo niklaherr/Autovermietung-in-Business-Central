@@ -27,17 +27,6 @@ page 60001 "KnkPosted Rental Header Card"
                     ApplicationArea = All;
                 }
 
-                field(StartDate; Rec.StartDate)
-                {
-                    ApplicationArea = All;
-                }
-
-
-                field(EndDate; Rec.EndDate)
-                {
-                    ApplicationArea = All;
-                }
-
                 field("Booking Date"; Rec."Booking Date")
                 {
                     ApplicationArea = All;
@@ -58,7 +47,20 @@ page 60001 "KnkPosted Rental Header Card"
                         CommentList.SetTableView(CommentRec);
                         CommentList.Run();
                     end;
+                }
             }
+
+            group(TimeframeInfo)
+            {
+                Caption = 'Timeframe Information';
+
+                field(InfoText; 'Individual pickup and return times are managed per rental line.')
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                    ShowCaption = false;
+                    Style = AttentionAccent;
+                }
             }
 
             group(RentalLines)

@@ -7,8 +7,6 @@ codeunit 60003 "KnkPosting Rental"
         PostedRentalHeader.Init();
         PostedRentalHeader.Customer := RentalHeader.Customer;
         PostedRentalHeader.CustomerName := RentalHeader.CustomerName;
-        PostedRentalHeader.StartDate := RentalHeader.StartDate;
-        PostedRentalHeader.EndDate := RentalHeader.EndDate;
         PostedRentalHeader."Booking Date" := Today;
         PostedRentalHeader.Insert(true);
 
@@ -27,6 +25,8 @@ codeunit 60003 "KnkPosting Rental"
         PostedRentalLine.Model := RentalLine.Model;
         PostedRentalLine."Driven Km" := RentalLine."Driven Km";
         PostedRentalLine.Price := RentalLine.Price;
+        PostedRentalLine."Pickup DateTime" := RentalLine."Pickup DateTime";
+        PostedRentalLine."Return DateTime" := RentalLine."Return DateTime";
         PostedRentalLine.Insert(true);
 
         RentalLine.Delete();
@@ -44,20 +44,15 @@ codeunit 60003 "KnkPosting Rental"
 
     local procedure TransferComments(SourceHeaderNo: Integer; TargetHeaderNo: Integer)
     var
-        SourceCommentRec: Record "KnkComment";
-        TargetCommentRec: Record "KnkComment";
+        CommentRec: Record "KnkComment";
     begin
-        SourceCommentRec.Reset();
-        SourceCommentRec.SetRange(HeaderNo, SourceHeaderNo);
-        if SourceCommentRec.FindSet(false) then
-            repeat
-                TargetCommentRec.Init();
-                TargetCommentRec.HeaderNo := TargetHeaderNo;
-                TargetCommentRec.Comment := SourceCommentRec.Comment;
-                TargetCommentRec.Posted := true;
-                TargetCommentRec.Date := SourceCommentRec.Date;
-                TargetCommentRec.Insert(true);
-                SourceCommentRec.Delete();
-            until SourceCommentRec.Next() = 0;
+        CommentRec.SetRange(HeaderNo, SourceHeaderNo);
+        CommentRec.SetRange(Posted, false);
+        while CommentRec.FindFirst() do begin
+            CommentRec.Posted := true;
+            CommentRec.Modify();
+            if CommentRec.HeaderNo <> TargetHeaderNo then
+                CommentRec.Rename(CommentRec.Nr, TargetHeaderNo);
+        end;
     end;
 }

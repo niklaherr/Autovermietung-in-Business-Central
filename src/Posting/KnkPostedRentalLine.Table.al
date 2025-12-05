@@ -46,6 +46,18 @@ table 50006 "KnkPosted Rental Line"
             Caption = 'Price';
             Editable = false;
         }
+
+        field(10; "Pickup DateTime"; DateTime)
+        {
+            Caption = 'Pickup Date/Time';
+            Editable = false;
+        }
+
+        field(11; "Return DateTime"; DateTime)
+        {
+            Caption = 'Return Date/Time';
+            Editable = false;
+        }
     }
 
 

@@ -39,6 +39,16 @@ page 60002 "KnkPosted Rental Lines"
                     ApplicationArea = All;
                 }
 
+                field("Pickup DateTime"; Rec."Pickup DateTime")
+                {
+                    ApplicationArea = All;
+                }
+
+                field("Return DateTime"; Rec."Return DateTime")
+                {
+                    ApplicationArea = All;
+                }
+
                 field("Driven Km"; Rec."Driven Km")
                 {
                     ApplicationArea = All;

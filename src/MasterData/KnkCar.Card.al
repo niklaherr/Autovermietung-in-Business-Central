@@ -36,11 +36,6 @@ page 70028 "KnkCar Card"
                     ApplicationArea = All;
                 }
 
-                field(Rented; Rec.Rented)
-                {
-                    ApplicationArea = All;
-                }
-
                 field("Price Per Day"; Rec."Price Per Day")
                 {
                     ApplicationArea = All;
